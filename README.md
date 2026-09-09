@@ -138,3 +138,5 @@ Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition ru
 [Round 12 report](reports/round12/report.md): five feature-family ablations across three holdouts; removing source means passed the screen but did not produce sufficient full-OOF improvement. No new submission.
 
 [Next-direction research](reports/next-direction-research/report.md): primary-source review recommends a controlled RealMLP experiment with learned embeddings for repeated numeric identities; no new training or submission in this research pass.
+
+[Round 13 report](reports/round13/report.md): official RealMLP with and without income/commute identity embeddings loses ensemble AUC on all three fixed holdouts at the tested 64-epoch budget. No expansion or submission; best public AUC remains **0.94632**.

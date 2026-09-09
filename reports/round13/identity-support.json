@@ -1,0 +1,50 @@
+[
+  {
+    "seed": 17,
+    "column": "Annual_Income_USD",
+    "training_unique": 12821,
+    "heldout_unseen_fraction": 0.00610166449818296,
+    "heldout_support_le5_fraction": 0.018319948554593447,
+    "heldout_median_training_support": 125.0
+  },
+  {
+    "seed": 17,
+    "column": "Daily_Commute_km",
+    "training_unique": 799,
+    "heldout_unseen_fraction": 8.973036026739648e-05,
+    "heldout_support_le5_fraction": 0.0003589214410695859,
+    "heldout_median_training_support": 1213.0
+  },
+  {
+    "seed": 91,
+    "column": "Annual_Income_USD",
+    "training_unique": 12821,
+    "heldout_unseen_fraction": 0.006116619558227526,
+    "heldout_support_le5_fraction": 0.018559229515306502,
+    "heldout_median_training_support": 125.0
+  },
+  {
+    "seed": 91,
+    "column": "Daily_Commute_km",
+    "training_unique": 802,
+    "heldout_unseen_fraction": 5.9820240178264314e-05,
+    "heldout_support_le5_fraction": 0.00029910120089132156,
+    "heldout_median_training_support": 1228.0
+  },
+  {
+    "seed": 2026,
+    "column": "Annual_Income_USD",
+    "training_unique": 12814,
+    "heldout_unseen_fraction": 0.006191394858450357,
+    "heldout_support_le5_fraction": 0.018050757473791257,
+    "heldout_median_training_support": 126.0
+  },
+  {
+    "seed": 2026,
+    "column": "Daily_Commute_km",
+    "training_unique": 802,
+    "heldout_unseen_fraction": 4.486518013369824e-05,
+    "heldout_support_le5_fraction": 0.0002093708406239251,
+    "heldout_median_training_support": 1224.0
+  }
+]

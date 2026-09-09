@@ -1,0 +1,4 @@
+# Optional official RealMLP experiment; install base requirements and GPU torch first.
+pytabkit==1.7.3
+pytorch-lightning==2.6.5
+torchmetrics==1.9.0

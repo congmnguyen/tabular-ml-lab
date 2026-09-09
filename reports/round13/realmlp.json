@@ -1,0 +1,843 @@
+{
+  "results": [
+    {
+      "name": "continuous",
+      "seed": 17,
+      "metrics": {
+        "auc": 0.939127868933203,
+        "log_loss": 0.23108525574207306,
+        "average_precision": 0.7464137149915273
+      },
+      "baseline_metrics": {
+        "auc": 0.9460360679147899,
+        "log_loss": 0.21845650672912598,
+        "average_precision": 0.7794924358168138
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9460360679147899,
+            "log_loss": 0.21845650672912598,
+            "average_precision": 0.7794924358168138
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9459559488628423,
+            "log_loss": 0.21867673099040985,
+            "average_precision": 0.7792580738011542
+          },
+          "auc_gain": -8.011905194760249e-05
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9457385212113167,
+            "log_loss": 0.21918118000030518,
+            "average_precision": 0.7780539402968691
+          },
+          "auc_gain": -0.0002975467034731505
+        }
+      ],
+      "prediction_correlation": 0.9696647798104269,
+      "seconds": 93.6777132419993,
+      "peak_gpu_allocated_bytes": 1815435776,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    },
+    {
+      "name": "identities",
+      "seed": 17,
+      "metrics": {
+        "auc": 0.9329175721930509,
+        "log_loss": 0.2485329508781433,
+        "average_precision": 0.7298447953480631
+      },
+      "baseline_metrics": {
+        "auc": 0.9460360679147899,
+        "log_loss": 0.21845650672912598,
+        "average_precision": 0.7794924358168138
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9460360679147899,
+            "log_loss": 0.21845650672912598,
+            "average_precision": 0.7794924358168138
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9458976925920952,
+            "log_loss": 0.21872812509536743,
+            "average_precision": 0.7784913829249515
+          },
+          "auc_gain": -0.00013837532269467268
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9454816232528771,
+            "log_loss": 0.2194930464029312,
+            "average_precision": 0.7765803363995861
+          },
+          "auc_gain": -0.0005544446619127896
+        }
+      ],
+      "prediction_correlation": 0.9464093816569473,
+      "seconds": 105.07611131500016,
+      "peak_gpu_allocated_bytes": 1694495744,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3,
+        "income_identity": 12821,
+        "commute_identity": 799
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    },
+    {
+      "name": "continuous",
+      "seed": 91,
+      "metrics": {
+        "auc": 0.9389008624959894,
+        "log_loss": 0.23164647817611694,
+        "average_precision": 0.7430817641765185
+      },
+      "baseline_metrics": {
+        "auc": 0.9455758913202441,
+        "log_loss": 0.2192644327878952,
+        "average_precision": 0.7790885599427908
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9455758913202441,
+            "log_loss": 0.2192644327878952,
+            "average_precision": 0.7790885599427908
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9454731298094724,
+            "log_loss": 0.21957947313785553,
+            "average_precision": 0.7782785884181135
+          },
+          "auc_gain": -0.00010276151077170947
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9452541241835327,
+            "log_loss": 0.2201307713985443,
+            "average_precision": 0.776424147437898
+          },
+          "auc_gain": -0.0003217671367113928
+        }
+      ],
+      "prediction_correlation": 0.9722236475710128,
+      "seconds": 97.40707267100152,
+      "peak_gpu_allocated_bytes": 1815435776,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    },
+    {
+      "name": "identities",
+      "seed": 91,
+      "metrics": {
+        "auc": 0.9286613593703105,
+        "log_loss": 0.2605624794960022,
+        "average_precision": 0.7176496295423495
+      },
+      "baseline_metrics": {
+        "auc": 0.9455758913202441,
+        "log_loss": 0.2192644327878952,
+        "average_precision": 0.7790885599427908
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9455758913202441,
+            "log_loss": 0.2192644327878952,
+            "average_precision": 0.7790885599427908
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9453732061700905,
+            "log_loss": 0.21959790587425232,
+            "average_precision": 0.7787553424262316
+          },
+          "auc_gain": -0.00020268515015364752
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9448350013009057,
+            "log_loss": 0.22058004140853882,
+            "average_precision": 0.7769785041969479
+          },
+          "auc_gain": -0.0007408900193384138
+        }
+      ],
+      "prediction_correlation": 0.9294141312500138,
+      "seconds": 112.37146692999886,
+      "peak_gpu_allocated_bytes": 1694496256,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3,
+        "income_identity": 12821,
+        "commute_identity": 802
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    },
+    {
+      "name": "continuous",
+      "seed": 2026,
+      "metrics": {
+        "auc": 0.9412895208773476,
+        "log_loss": 0.22734925150871277,
+        "average_precision": 0.7552123020165146
+      },
+      "baseline_metrics": {
+        "auc": 0.9483007839311721,
+        "log_loss": 0.21405504643917084,
+        "average_precision": 0.7887434395361765
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9483007839311721,
+            "log_loss": 0.21405504643917084,
+            "average_precision": 0.7887434395361765
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9481771441276615,
+            "log_loss": 0.2144216150045395,
+            "average_precision": 0.7881606858385101
+          },
+          "auc_gain": -0.0001236398035106001
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9479392128941357,
+            "log_loss": 0.21503183245658875,
+            "average_precision": 0.7865785528741078
+          },
+          "auc_gain": -0.00036157103703637894
+        }
+      ],
+      "prediction_correlation": 0.9694724586897213,
+      "seconds": 104.0459482979968,
+      "peak_gpu_allocated_bytes": 1815435776,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    },
+    {
+      "name": "identities",
+      "seed": 2026,
+      "metrics": {
+        "auc": 0.9339034617472362,
+        "log_loss": 0.24806253612041473,
+        "average_precision": 0.734969165823508
+      },
+      "baseline_metrics": {
+        "auc": 0.9483007839311721,
+        "log_loss": 0.21405504643917084,
+        "average_precision": 0.7887434395361765
+      },
+      "blends": [
+        {
+          "neural_weight": 0.0,
+          "metrics": {
+            "auc": 0.9483007839311721,
+            "log_loss": 0.21405504643917084,
+            "average_precision": 0.7887434395361765
+          },
+          "auc_gain": 0.0
+        },
+        {
+          "neural_weight": 0.1,
+          "metrics": {
+            "auc": 0.9481029971735703,
+            "log_loss": 0.21441012620925903,
+            "average_precision": 0.7880413292882464
+          },
+          "auc_gain": -0.00019778675760184772
+        },
+        {
+          "neural_weight": 0.2,
+          "metrics": {
+            "auc": 0.9476242689063779,
+            "log_loss": 0.21529600024223328,
+            "average_precision": 0.7861494087677499
+          },
+          "auc_gain": -0.0006765150247942664
+        }
+      ],
+      "prediction_correlation": 0.9386062246420237,
+      "seconds": 118.04485931700037,
+      "peak_gpu_allocated_bytes": 1694495744,
+      "params": {
+        "act": null,
+        "act_lr_factor": null,
+        "add_front_scale": null,
+        "batch_size": 1024,
+        "bias_init_mode": null,
+        "bias_lr_factor": null,
+        "bias_wd_factor": null,
+        "block_str": null,
+        "calibration_method": null,
+        "clamp_output": null,
+        "device": "cuda",
+        "early_stopping_additive_patience": null,
+        "early_stopping_multiplicative_patience": null,
+        "embedding_size": null,
+        "ens_av_before_softmax": null,
+        "first_layer_config": null,
+        "first_layer_lr_factor": null,
+        "hidden_sizes": null,
+        "hidden_width": null,
+        "last_layer_config": null,
+        "lr": null,
+        "lr_sched": null,
+        "ls_eps": null,
+        "ls_eps_sched": null,
+        "max_one_hot_cat_size": null,
+        "middle_layer_config": null,
+        "mom": null,
+        "mom_sched": null,
+        "n_cv": 1,
+        "n_ens": 1,
+        "n_epochs": 64,
+        "n_hidden_layers": null,
+        "n_refit": 0,
+        "n_repeats": 1,
+        "n_threads": 4,
+        "normalize_output": null,
+        "num_emb_type": null,
+        "opt": null,
+        "opt_eps": null,
+        "opt_eps_sched": null,
+        "p_drop": null,
+        "p_drop_sched": null,
+        "plr_act_name": null,
+        "plr_hidden_1": null,
+        "plr_hidden_2": null,
+        "plr_lr_factor": null,
+        "plr_sigma": null,
+        "plr_use_cos_bias": null,
+        "plr_use_densenet": null,
+        "predict_batch_size": 4096,
+        "random_state": 42,
+        "scale_lr_factor": null,
+        "sort_quantile_predictions": null,
+        "sq_mom": null,
+        "sq_mom_sched": null,
+        "stop_epoch": 64,
+        "tfms": null,
+        "tmp_folder": null,
+        "train_metric_name": null,
+        "use_best_mean_epoch_for_cv": null,
+        "use_early_stopping": null,
+        "use_ls": false,
+        "use_parametric_act": null,
+        "use_plr_embeddings": null,
+        "val_fraction": 0.0,
+        "val_metric_name": "cross_entropy",
+        "verbosity": 2,
+        "wd": null,
+        "wd_sched": null,
+        "weight_init_gain": null,
+        "weight_init_mode": null,
+        "weight_lr_factor": null,
+        "weight_param": null
+      },
+      "categorical_cardinalities": {
+        "Gender": 3,
+        "City_Type": 3,
+        "Current_Car_Type": 4,
+        "Home_Charging_Possible": 2,
+        "Subsidy_Available": 2,
+        "Range_Anxiety_Level": 3,
+        "income_identity": 12814,
+        "commute_identity": 802
+      },
+      "script_sha256": "1597573df21deba24542242467c9157bc762ff8128005859754060ecfd986cb7",
+      "feature_script_sha256": "feb6aa03b91b48f80cd03cdc99fd4be036e05241c8896ff570c37f3ce165b67e"
+    }
+  ],
+  "summary": [
+    {
+      "name": "continuous",
+      "neural_weight": 0.1,
+      "gains": [
+        -8.011905194760249e-05,
+        -0.00010276151077170947,
+        -0.0001236398035106001
+      ],
+      "mean_auc_gain": -0.00010217345540997069,
+      "passes_gate": false
+    },
+    {
+      "name": "continuous",
+      "neural_weight": 0.2,
+      "gains": [
+        -0.0002975467034731505,
+        -0.0003217671367113928,
+        -0.00036157103703637894
+      ],
+      "mean_auc_gain": -0.0003269616257403074,
+      "passes_gate": false
+    },
+    {
+      "name": "identities",
+      "neural_weight": 0.1,
+      "gains": [
+        -0.00013837532269467268,
+        -0.00020268515015364752,
+        -0.00019778675760184772
+      ],
+      "mean_auc_gain": -0.0001796157434833893,
+      "passes_gate": false
+    },
+    {
+      "name": "identities",
+      "neural_weight": 0.2,
+      "gains": [
+        -0.0005544446619127896,
+        -0.0007408900193384138,
+        -0.0006765150247942664
+      ],
+      "mean_auc_gain": -0.00065728323534849,
+      "passes_gate": false
+    }
+  ],
+  "protocol": "Fixed 64 epochs; all outer training rows used; no scored-fold or internal best-epoch selection. Shared numeric features; categorical identity view is the only feature difference. Reused overlapping development holdouts."
+}
