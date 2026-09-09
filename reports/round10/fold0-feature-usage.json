@@ -1,0 +1,54 @@
+{
+  "source_match_Range_Anxiety_Level": {
+    "gain": 8.181388854980469,
+    "rank": 93
+  },
+  "source_delta_Charging_Stations_Near_Home": {
+    "gain": 8.059319496154785,
+    "rank": 97
+  },
+  "source_match_Current_Car_Type": {
+    "gain": 7.810951232910156,
+    "rank": 109
+  },
+  "source_match_Subsidy_Available": {
+    "gain": 7.6349358558654785,
+    "rank": 123
+  },
+  "source_recipe": {
+    "gain": 7.566554546356201,
+    "rank": 128
+  },
+  "source_delta_recipe": {
+    "gain": 7.204839706420898,
+    "rank": 146
+  },
+  "source_match_fraction": {
+    "gain": 7.158779621124268,
+    "rank": 148
+  },
+  "source_delta_Daily_Commute_km": {
+    "gain": 6.971958637237549,
+    "rank": 167
+  },
+  "source_delta_Charging_Stations_Near_Work": {
+    "gain": 6.850503921508789,
+    "rank": 173
+  },
+  "source_unique_income": {
+    "gain": 6.700068473815918,
+    "rank": 180
+  },
+  "source_match_City_Type": {
+    "gain": 6.399464130401611,
+    "rank": 189
+  },
+  "source_delta_Environmental_Concern_Level": {
+    "gain": 6.389805316925049,
+    "rank": 190
+  },
+  "source_match_Home_Charging_Possible": {
+    "gain": 5.028631687164307,
+    "rank": 197
+  }
+}

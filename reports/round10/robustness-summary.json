@@ -1,0 +1,14 @@
+{
+  "train": {
+    "observed_equal_income": 4.093737122310655,
+    "null_equal_income_mean": 4.019087714607197,
+    "observed_row_weighted": 4.083213577897621,
+    "null_row_weighted": 4.011398809288811
+  },
+  "test": {
+    "observed_equal_income": 4.099795982238021,
+    "null_equal_income_mean": 4.022377990264557,
+    "observed_row_weighted": 4.082992671159724,
+    "null_row_weighted": 4.008199830589621
+  }
+}

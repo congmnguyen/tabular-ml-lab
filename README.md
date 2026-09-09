@@ -130,3 +130,5 @@ Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition ru
 [Round 8 diagnostic](reports/round8/report.md): broad shared error regions replicate partly, but a fixed holdout correction adds only 0.000011 AUC; no new submission.
 
 [Round 9 report](reports/round9/report.md): joint income/commute effects improved ensemble OOF, but public AUC was **0.94631**. Best public result remains round seven (**0.94632**).
+
+[Round 10 report](reports/round10/report.md): label-free controls find multi-column source associations on both train and test, but explicit source-context features add insufficient OOF gain; no submission.
