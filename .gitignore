@@ -183,3 +183,12 @@ models
 *.h5
 *.pkl
 *.pth 
+
+# Experiment artifacts and credentials
+artifacts/
+data/
+catboost_info/
+.env.*
+.kaggle/
+access_token
+kaggle.json

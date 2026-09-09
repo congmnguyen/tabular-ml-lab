@@ -1,43 +1,28 @@
-import os
-import pandas as pd
-from sklearn import ensemble
-from sklearn import preprocessing
-from sklearn import metrics
+"""Predict with saved fold pipelines, preserving test ID order."""
+import argparse
+from pathlib import Path
 import joblib
 import numpy as np
-from . import dispatcher
+import pandas as pd
+from .pipeline import predict_bundle, validate_submission
 
-TEST_DATA = os.environ.get("TEST_DATA")
-MODEL = os.environ.get("MODEL")
-
-def predict():
-    df = pd.read_csv(TEST_DATA)
-    test_idx = df["id"].values
-    predictions = None
-
-    for FOLD in range(5):
-        print(FOLD)
-        df = pd.read_csv(TEST_DATA)
-        encoders = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}_label_encoder.pkl"))
-        cols = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}_columns.pkl"))
-        for c in encoders:
-            print(c)
-            lbl = encoders[c]
-            df.loc[:, c] = lbl.transform(df[c].values.tolist())
-
-        # Data is ready to train
-        clf = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}.pkl"))
-        
-
-        df = df[cols]
-        preds = clf.predict_proba(df)[:, 1]
-        if FOLD == 0:
-            predictions = preds
-        else:
-            predictions += preds
-    predictions /= 5
-    sub = pd.DataFrame(np.column_stack((test_idx, predictions)), columns=["id", "target"])
-    return sub
-if __name__ == "__main__":
-    submission = predict()
-    submission.to_csv(f"models/{MODEL}.csv", index=False)
+if __name__ == '__main__':
+    p = argparse.ArgumentParser()
+    p.add_argument('--run', required=True)
+    p.add_argument('--test', required=True)
+    p.add_argument('--output', required=True)
+    a = p.parse_args()
+    paths = sorted(Path(a.run).glob('fold-*.joblib'))
+    if not paths:
+        raise ValueError('No saved folds found')
+    test = pd.read_csv(a.test)
+    predictions = []
+    for path in paths:
+        bundle = joblib.load(path)
+        predictions.append(predict_bundle(bundle, test))
+    config = bundle['config']
+    if len(paths) != config['folds']:
+        raise ValueError('Incomplete fold artifacts')
+    sub = pd.DataFrame({config['id']: test[config['id']], config['target']: np.mean(predictions, axis=0)})
+    validate_submission(sub, test, config)
+    sub.to_csv(a.output, index=False)

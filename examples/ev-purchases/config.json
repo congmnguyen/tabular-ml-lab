@@ -1,0 +1,9 @@
+{
+  "competition": "playground-series-s6e9",
+  "target": "Will_Buy_EV",
+  "positive_label": "Yes",
+  "id": "id",
+  "seed": 42,
+  "folds": 5,
+  "threads": 8
+}
