@@ -22,7 +22,8 @@ def test_target_encoding_is_cross_fitted_and_unseen_is_finite():
     assert p.Gender.iloc[0]==-1
     np.testing.assert_allclose(p.Age_te0,.5)
 
-def test_inference_preserves_training_fold_accumulation(monkeypatch):
+def test_inference_preserves_training_fold_accumulation(monkeypatch, tmp_path):
+    (tmp_path / "summary.json").write_text("{}")
     from src import predict_expert
     arrays=[np.array([.1234567+i*.0123456,.9876543-i*.013579],dtype=np.float32) for i in range(5)]
     class Encoder:
@@ -36,4 +37,4 @@ def test_inference_preserves_training_fold_accumulation(monkeypatch):
     monkeypatch.setattr(predict_expert.joblib,'load',load)
     expected=np.zeros(2,dtype=np.float64)
     for p in arrays:expected+=p/5
-    np.testing.assert_array_equal(predict_expert.predict_run('unused',pd.DataFrame({'id':[1,2]})),expected)
+    np.testing.assert_array_equal(predict_expert.predict_run(tmp_path,pd.DataFrame({'id':[1,2]})),expected)

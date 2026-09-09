@@ -6,9 +6,9 @@ The case study compares linear, boosting and neural models on identical folds, i
 
 ## Results
 
-**Best submitted public AUC: 0.94627**, from a rank blend of LightGBM (45%), XGBoost with a fold-fitted probit offset, joint remainder features and lower target-encoding smoothing (45%) and TabM (10%). Development mean five-fold AUC is 0.946166. The requested leaderboard target of 0.94672 has not been exceeded.
+**Best submitted public AUC: 0.94632**, from the average of ten outer-fold XGBoost models with fold-fitted probit offsets, joint remainder features and target-encoding smoothing 2/20. Development pooled OOF AUC is 0.946221. The requested leaderboard target of 0.94672 has not been exceeded.
 
-[Round 4 report](reports/round4/report.md) documents the mechanism audit, conditional permutation diagnostics, failed risk-adjusted encoding, five-fold improvements and the new public best. [Current selected blend](reports/round6/selected.json). The [round 5 diagnostic](reports/round5/report.md) checks whether income-specific subgroup errors replicate on two held-out sets; the evidence did not justify adding conditional encodings.
+[Round 4 report](reports/round4/report.md) documents the mechanism audit, conditional permutation diagnostics, failed risk-adjusted encoding, five-fold improvements and the new public best. [Round 6 selected blend](reports/round6/selected.json). The [round 5 diagnostic](reports/round5/report.md) checks whether income-specific subgroup errors replicate on two held-out sets; the evidence did not justify adding conditional encodings.
 
 [Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json). The [round 3 report](reports/round3/report.md) adds nine run configurations and a five-fold TabM ensemble: development mean AUC increased to 0.946066, while its public submission tied 0.94618. These earlier blends are retained as historical baselines.
 
@@ -124,3 +124,5 @@ The original learning code based on Abhishek Thakur's *Approaching (Almost) Any 
 Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition rules](https://www.kaggle.com/competitions/playground-series-s6e9/rules); it is not redistributed here.
 
 [Round 6 report](reports/round6/report.md): public notebook hypotheses independently checked, source-feature recovery, smoothing experiments and exact saved-model reproduction. Selected blend public AUC: **0.94627**.
+
+[Round 7 report](reports/round7/report.md): ten outer folds improve pooled OOF and public AUC (**0.94632**); all predictions reproduced exactly from saved models. [Current selected run](reports/round7/runs/r7-tenfold.json).

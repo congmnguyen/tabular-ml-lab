@@ -1,0 +1,81 @@
+{
+  "candidate": "artifacts/r7-tenfold",
+  "candidate_pooled_auc": 0.9462213460556969,
+  "comparisons": [
+    {
+      "reference": "artifacts/r6-low-smoothing",
+      "reference_pooled_auc": 0.9461301588100542,
+      "pooled_difference": 9.118724564260994e-05,
+      "same_row_groups": [
+        {
+          "reference_fold": 0,
+          "reference_auc": 0.9451596619078422,
+          "candidate_auc": 0.9452193672114507,
+          "difference": 5.97053036085482e-05
+        },
+        {
+          "reference_fold": 1,
+          "reference_auc": 0.945833256263506,
+          "candidate_auc": 0.945982785628063,
+          "difference": 0.0001495293645570328
+        },
+        {
+          "reference_fold": 2,
+          "reference_auc": 0.9469741803094588,
+          "candidate_auc": 0.9470733001497151,
+          "difference": 9.911984025634535e-05
+        },
+        {
+          "reference_fold": 3,
+          "reference_auc": 0.9464385514756898,
+          "candidate_auc": 0.9465589976316562,
+          "difference": 0.00012044615596640273
+        },
+        {
+          "reference_fold": 4,
+          "reference_auc": 0.9462712262930256,
+          "candidate_auc": 0.9462844588222473,
+          "difference": 1.3232529221696154e-05
+        }
+      ]
+    },
+    {
+      "reference": "artifacts/r6-blend",
+      "reference_pooled_auc": 0.9461665291584832,
+      "pooled_difference": 5.4816897213649796e-05,
+      "same_row_groups": [
+        {
+          "reference_fold": 0,
+          "reference_auc": 0.9452288950084179,
+          "candidate_auc": 0.9452193672114507,
+          "difference": -9.5277969671681e-06
+        },
+        {
+          "reference_fold": 1,
+          "reference_auc": 0.9458771009203206,
+          "candidate_auc": 0.945982785628063,
+          "difference": 0.00010568470774241501
+        },
+        {
+          "reference_fold": 2,
+          "reference_auc": 0.9469736669200639,
+          "candidate_auc": 0.9470733001497151,
+          "difference": 9.963322965123034e-05
+        },
+        {
+          "reference_fold": 3,
+          "reference_auc": 0.9464856258114626,
+          "candidate_auc": 0.9465589976316562,
+          "difference": 7.337182019362398e-05
+        },
+        {
+          "reference_fold": 4,
+          "reference_auc": 0.9462664609067658,
+          "candidate_auc": 0.9462844588222473,
+          "difference": 1.7997915481515747e-05
+        }
+      ]
+    }
+  ],
+  "caveat": "Same-row groups are descriptive comparisons, not paired training folds or independent statistical replicates. No cross-partition blending."
+}

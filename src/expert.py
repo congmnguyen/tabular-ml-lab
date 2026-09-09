@@ -92,7 +92,8 @@ def main():
     p.add_argument('--output',required=True)
     p.add_argument('--mode',choices=['recipe','digits','full'],default='full')
     p.add_argument('--model',choices=['lgb','xgb'],default='lgb')
-    p.add_argument('--folds',default='0,1,2,3,4')
+    p.add_argument('--splits',type=int,default=5)
+    p.add_argument('--folds',default=None)
     p.add_argument('--rounds',type=int,default=5000)
     p.add_argument('--depth',type=int,default=5)
     p.add_argument('--rate',type=float,default=.03)
@@ -100,8 +101,9 @@ def main():
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     df=pd.read_csv(Path(a.data)/'train.csv');test=pd.read_csv(Path(a.data)/'test.csv');orig=pd.read_csv(a.original)
     y=df[TARGET].eq('Yes').astype(int)
-    splitter=list(StratifiedKFold(5,shuffle=True,random_state=42).split(df,y))
-    todo=[int(f) for f in a.folds.split(',')]
+    splitter=list(StratifiedKFold(a.splits,shuffle=True,random_state=42).split(df,y))
+    todo=list(range(a.splits)) if a.folds is None else [int(f) for f in a.folds.split(',')]
+    assert all(0 <= f < a.splits for f in todo)
     for fold in todo:
         if (out/f'fold{fold}.json').exists():continue
         tick=time.monotonic();tr,va=splitter[fold]
@@ -132,12 +134,12 @@ def main():
         (out/f'fold{fold}.json').write_text(json.dumps(result,indent=2)+'\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ['params','features']}),flush=True)
         del xt,xv,xx,model,enc
-    files=[out/f'fold{f}.npz' for f in range(5)]
+    files=[out/f'fold{f}.npz' for f in range(a.splits)]
     if all(f.exists() for f in files):
         oof=np.full(len(df),np.nan);pred=np.zeros(len(test));folds=np.full(len(df),-1)
         results=[]
         for i,f in enumerate(files):
-            z=np.load(f);oof[z['indices']]=z['oof'];pred+=z['test']/5;folds[z['indices']]=i
+            z=np.load(f);assert np.array_equal(z['indices'],splitter[i][1]);oof[z['indices']]=z['oof'];pred+=z['test']/a.splits;folds[z['indices']]=i
             results.append(json.loads((out/f'fold{i}.json').read_text()))
         assert np.isfinite(oof).all()
         pd.DataFrame({'id':df.id,'target':y,'fold':folds,'prediction':oof}).to_csv(out/'oof.csv',index=False)

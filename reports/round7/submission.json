@@ -1,0 +1,9 @@
+{
+  "ref": "56122041",
+  "fileName": "submission.csv",
+  "date": "2026-09-09 12:04:39.303000",
+  "description": "Round 7: ten outer folds, offset XGB modulo smoothing 2/20; pooled OOF 0.946221346; exact reload verified",
+  "status": "SubmissionStatus.COMPLETE",
+  "publicScore": "0.94632",
+  "privateScore": ""
+}

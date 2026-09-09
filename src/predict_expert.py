@@ -11,7 +11,9 @@ from .pipeline import validate_submission
 
 def predict_run(path,test):
     predictions=np.zeros(len(test),dtype=np.float64)
-    for f in range(5):
+    summary=json.loads((Path(path)/'summary.json').read_text())
+    splits=summary.get('args',{}).get('splits',5)
+    for f in range(splits):
         checkpoint_path=Path(path)/f'fold{f}.pt'
         if checkpoint_path.exists():
             import torch
@@ -28,7 +30,7 @@ def predict_run(path,test):
             b=joblib.load(Path(path)/f'fold{f}.joblib')
             x=b['encoder'].transform(test)
             pp=b['model'].predict_proba(x)[:,1]
-        predictions += pp / 5
+        predictions += pp / splits
     return predictions
 
 
