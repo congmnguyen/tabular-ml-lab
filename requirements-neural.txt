@@ -1,0 +1,6 @@
+# Optional GPU experiment; install base requirements first.
+# CUDA wheel: uv pip install --python .venv/bin/python torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+# Then: uv pip install --python .venv/bin/python -r requirements-neural.txt
+torch==2.11.0
+tabm==0.0.3
+rtdl-num-embeddings==0.0.12

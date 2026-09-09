@@ -1,0 +1,38 @@
+[
+  {
+    "ref": "56120517",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 10:41:50.210000",
+    "description": "Five-fold rank blend: LGB 40 XGB 40 TabM 20; mean CV 0.946065777; improves all folds; saved-model inference verified",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.94618",
+    "privateScore": ""
+  },
+  {
+    "ref": "56119769",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 10:03:17.877000",
+    "description": "Round2: expert-informed cross-fitted TE, original stats; LGB/XGB 50:50 rank blend selected by 5-fold CV 0.946021",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.94618",
+    "privateScore": ""
+  },
+  {
+    "ref": "56119531",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 09:48:26.723000",
+    "description": "ml-template: CV-selected LightGBM charging/commute features; mean 5-fold AUC 0.941800; seed 42",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.94160",
+    "privateScore": ""
+  },
+  {
+    "ref": "56119454",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 09:43:59.893000",
+    "description": "ml-template: logistic baseline, 5 fixed folds, seed 42, train-fold preprocessing",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.93738",
+    "privateScore": ""
+  }
+]

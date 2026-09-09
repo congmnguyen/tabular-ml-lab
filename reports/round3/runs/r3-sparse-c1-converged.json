@@ -1,0 +1,36 @@
+{
+  "run": "artifacts/r3-sparse-c1-converged",
+  "complete": false,
+  "folds": [
+    {
+      "fold": 0,
+      "auc": 0.94313991325556,
+      "log_loss": 0.22415265440940857,
+      "average_precision": 0.7651508296281777,
+      "iterations": 929,
+      "converged": true,
+      "seconds": 48.3676421680002,
+      "C": 1.0,
+      "source_sha256": "dec864f56d638b3a836d982439117cc977ac60850446cce1a9331a30490f6ae7",
+      "actual_estimator_params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 3000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 1e-05,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "encoder_class": "src.sparse_values.ValueEncoder",
+      "encoder_source_sha256": "dec864f56d638b3a836d982439117cc977ac60850446cce1a9331a30490f6ae7",
+      "artifact_sha256": "96109a2779630b0e84f013baa94b4e41c0dc6bc47af5dbe691fb577a4fb3a1b3"
+    }
+  ]
+}

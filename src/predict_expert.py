@@ -12,9 +12,23 @@ from .pipeline import validate_submission
 def predict_run(path,test):
     predictions=np.zeros(len(test),dtype=np.float64)
     for f in range(5):
-        b=joblib.load(Path(path)/f'fold{f}.joblib')
-        x=b['encoder'].transform(test)
-        predictions += b['model'].predict_proba(x)[:,1] / 5
+        checkpoint_path=Path(path)/f'fold{f}.pt'
+        if checkpoint_path.exists():
+            import torch
+            from .neural import make_model, predict
+            torch.set_num_threads(4)
+            torch.set_float32_matmul_precision('high')
+            checkpoint=torch.load(checkpoint_path,weights_only=True,map_location='cpu')
+            model=make_model(checkpoint['n_features'],checkpoint['k'],checkpoint['width'],checkpoint.get('bins')).cuda()
+            model.load_state_dict(checkpoint['state'])
+            encoder=joblib.load(Path(path)/f'encoder{f}.joblib')
+            pp=predict(model,encoder.transform(test))
+            del model,encoder
+        else:
+            b=joblib.load(Path(path)/f'fold{f}.joblib')
+            x=b['encoder'].transform(test)
+            pp=b['model'].predict_proba(x)[:,1]
+        predictions += pp / 5
     return predictions
 
 

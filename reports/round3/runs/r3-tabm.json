@@ -1,0 +1,957 @@
+{
+  "run": "artifacts/r3-tabm",
+  "oof": {
+    "auc": 0.9451740023461489,
+    "log_loss": 0.2200175003909498,
+    "average_precision": 0.7763316771982499
+  },
+  "mean_auc": 0.9453452427560883,
+  "folds": [
+    {
+      "fold": 0,
+      "auc": 0.9443907799615621,
+      "log_loss": 0.22195371985435486,
+      "average_precision": 0.7741229736150756,
+      "best_epoch": 16,
+      "history": [
+        {
+          "epoch": 1,
+          "auc": 0.942912041355996
+        },
+        {
+          "epoch": 2,
+          "auc": 0.9435104356113894
+        },
+        {
+          "epoch": 3,
+          "auc": 0.9437485529523799
+        },
+        {
+          "epoch": 4,
+          "auc": 0.9438822712565794
+        },
+        {
+          "epoch": 5,
+          "auc": 0.9440445584048329
+        },
+        {
+          "epoch": 6,
+          "auc": 0.9440473527571914
+        },
+        {
+          "epoch": 7,
+          "auc": 0.9441204351474808
+        },
+        {
+          "epoch": 8,
+          "auc": 0.9440619841700124
+        },
+        {
+          "epoch": 9,
+          "auc": 0.9442213078345644
+        },
+        {
+          "epoch": 10,
+          "auc": 0.9442362105945743
+        },
+        {
+          "epoch": 11,
+          "auc": 0.9442693322138701
+        },
+        {
+          "epoch": 12,
+          "auc": 0.9442781140485151
+        },
+        {
+          "epoch": 13,
+          "auc": 0.9443142286331225
+        },
+        {
+          "epoch": 14,
+          "auc": 0.9443238252851659
+        },
+        {
+          "epoch": 15,
+          "auc": 0.94435261873254
+        },
+        {
+          "epoch": 16,
+          "auc": 0.9443907799615621
+        },
+        {
+          "epoch": 17,
+          "auc": 0.9443218523447766
+        },
+        {
+          "epoch": 18,
+          "auc": 0.9442991332728565
+        },
+        {
+          "epoch": 19,
+          "auc": 0.9443219584397817
+        },
+        {
+          "epoch": 20,
+          "auc": 0.9442883569684882
+        },
+        {
+          "epoch": 21,
+          "auc": 0.9442957225220949
+        },
+        {
+          "epoch": 22,
+          "auc": 0.9443288567486581
+        },
+        {
+          "epoch": 23,
+          "auc": 0.9443710767419929
+        }
+      ],
+      "args": {
+        "output": "artifacts/r3-tabm",
+        "folds": "0",
+        "epochs": 40,
+        "patience": 7,
+        "rate": 0.002,
+        "k": 8,
+        "width": 128
+      },
+      "seconds": 46.87742367699957,
+      "features": [
+        "Age",
+        "Annual_Income_USD",
+        "Daily_Commute_km",
+        "Number_of_Cars_Owned",
+        "Charging_Stations_Near_Home",
+        "Charging_Stations_Near_Work",
+        "Environmental_Concern_Level",
+        "recipe",
+        "worry",
+        "subsidy_income",
+        "subsidy_concern",
+        "Annual_Income_USD_digit_0",
+        "Annual_Income_USD_digit_1",
+        "Annual_Income_USD_digit_2",
+        "Annual_Income_USD_digit_3",
+        "income_bin100",
+        "income_bin1000",
+        "commute_bin1",
+        "Gender",
+        "City_Type",
+        "Current_Car_Type",
+        "Home_Charging_Possible",
+        "Subsidy_Available",
+        "Range_Anxiety_Level",
+        "Annual_Income_USD_frequency",
+        "Daily_Commute_km_frequency",
+        "Age_original_mean",
+        "Gender_original_mean",
+        "Annual_Income_USD_original_mean",
+        "City_Type_original_mean",
+        "Daily_Commute_km_original_mean",
+        "Number_of_Cars_Owned_original_mean",
+        "Current_Car_Type_original_mean",
+        "Charging_Stations_Near_Home_original_mean",
+        "Charging_Stations_Near_Work_original_mean",
+        "Home_Charging_Possible_original_mean",
+        "Environmental_Concern_Level_original_mean",
+        "Subsidy_Available_original_mean",
+        "Range_Anxiety_Level_original_mean",
+        "Annual_Income_USD_te0",
+        "Daily_Commute_km_te0",
+        "Annual_Income_USD_te1",
+        "Daily_Commute_km_te1"
+      ],
+      "source_sha256": "d6b0dfcebb2cccc09bc66c86b949dc3c20d8bd7cdd2e68efdc0f017e1f4f03fe",
+      "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+      "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+      "torch_version": "2.11.0+cu128",
+      "early_stopping_on_scored_fold": true
+    },
+    {
+      "fold": 1,
+      "auc": 0.9450566858541457,
+      "log_loss": 0.22065384685993195,
+      "average_precision": 0.7777749431143047,
+      "best_epoch": 22,
+      "history": [
+        {
+          "epoch": 1,
+          "auc": 0.9438477319918155
+        },
+        {
+          "epoch": 2,
+          "auc": 0.9443401197455725
+        },
+        {
+          "epoch": 3,
+          "auc": 0.9443704694569012
+        },
+        {
+          "epoch": 4,
+          "auc": 0.9445829707728424
+        },
+        {
+          "epoch": 5,
+          "auc": 0.9446310713055502
+        },
+        {
+          "epoch": 6,
+          "auc": 0.9445854981537276
+        },
+        {
+          "epoch": 7,
+          "auc": 0.944681012825087
+        },
+        {
+          "epoch": 8,
+          "auc": 0.9446436178286178
+        },
+        {
+          "epoch": 9,
+          "auc": 0.9447225946507458
+        },
+        {
+          "epoch": 10,
+          "auc": 0.9449073568414003
+        },
+        {
+          "epoch": 11,
+          "auc": 0.9447459378672174
+        },
+        {
+          "epoch": 12,
+          "auc": 0.9447671497515925
+        },
+        {
+          "epoch": 13,
+          "auc": 0.9449463872361982
+        },
+        {
+          "epoch": 14,
+          "auc": 0.9448149649817695
+        },
+        {
+          "epoch": 15,
+          "auc": 0.9449292679206254
+        },
+        {
+          "epoch": 16,
+          "auc": 0.9449440828994398
+        },
+        {
+          "epoch": 17,
+          "auc": 0.9449590388809328
+        },
+        {
+          "epoch": 18,
+          "auc": 0.9449861955701206
+        },
+        {
+          "epoch": 19,
+          "auc": 0.9449410555118074
+        },
+        {
+          "epoch": 20,
+          "auc": 0.9449255706248064
+        },
+        {
+          "epoch": 21,
+          "auc": 0.94493443013148
+        },
+        {
+          "epoch": 22,
+          "auc": 0.9450566858541457
+        },
+        {
+          "epoch": 23,
+          "auc": 0.9449545477419732
+        },
+        {
+          "epoch": 24,
+          "auc": 0.9450313301977946
+        },
+        {
+          "epoch": 25,
+          "auc": 0.9450142915660106
+        },
+        {
+          "epoch": 26,
+          "auc": 0.944924460252957
+        },
+        {
+          "epoch": 27,
+          "auc": 0.9450350226448285
+        },
+        {
+          "epoch": 28,
+          "auc": 0.9448887390571972
+        },
+        {
+          "epoch": 29,
+          "auc": 0.9449688534043724
+        }
+      ],
+      "args": {
+        "output": "artifacts/r3-tabm",
+        "folds": "1,2,3,4",
+        "epochs": 40,
+        "patience": 7,
+        "rate": 0.002,
+        "embedding": "linear",
+        "k": 8,
+        "width": 128
+      },
+      "seconds": 89.31062601399935,
+      "features": [
+        "Age",
+        "Annual_Income_USD",
+        "Daily_Commute_km",
+        "Number_of_Cars_Owned",
+        "Charging_Stations_Near_Home",
+        "Charging_Stations_Near_Work",
+        "Environmental_Concern_Level",
+        "recipe",
+        "worry",
+        "subsidy_income",
+        "subsidy_concern",
+        "Annual_Income_USD_digit_0",
+        "Annual_Income_USD_digit_1",
+        "Annual_Income_USD_digit_2",
+        "Annual_Income_USD_digit_3",
+        "income_bin100",
+        "income_bin1000",
+        "commute_bin1",
+        "Gender",
+        "City_Type",
+        "Current_Car_Type",
+        "Home_Charging_Possible",
+        "Subsidy_Available",
+        "Range_Anxiety_Level",
+        "Annual_Income_USD_frequency",
+        "Daily_Commute_km_frequency",
+        "Age_original_mean",
+        "Gender_original_mean",
+        "Annual_Income_USD_original_mean",
+        "City_Type_original_mean",
+        "Daily_Commute_km_original_mean",
+        "Number_of_Cars_Owned_original_mean",
+        "Current_Car_Type_original_mean",
+        "Charging_Stations_Near_Home_original_mean",
+        "Charging_Stations_Near_Work_original_mean",
+        "Home_Charging_Possible_original_mean",
+        "Environmental_Concern_Level_original_mean",
+        "Subsidy_Available_original_mean",
+        "Range_Anxiety_Level_original_mean",
+        "Annual_Income_USD_te0",
+        "Daily_Commute_km_te0",
+        "Annual_Income_USD_te1",
+        "Daily_Commute_km_te1"
+      ],
+      "source_sha256": "75cf9c0deffa0d53b832a61f53a0e5ba3f5322604942889da29f15ccc6fea5a0",
+      "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+      "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+      "torch_version": "2.11.0+cu128",
+      "early_stopping_on_scored_fold": true
+    },
+    {
+      "fold": 2,
+      "auc": 0.9462097435006038,
+      "log_loss": 0.21821747720241547,
+      "average_precision": 0.7783668914973755,
+      "best_epoch": 15,
+      "history": [
+        {
+          "epoch": 1,
+          "auc": 0.9448748920898938
+        },
+        {
+          "epoch": 2,
+          "auc": 0.9453892661760246
+        },
+        {
+          "epoch": 3,
+          "auc": 0.945582170641021
+        },
+        {
+          "epoch": 4,
+          "auc": 0.9456709848728557
+        },
+        {
+          "epoch": 5,
+          "auc": 0.9457968767966447
+        },
+        {
+          "epoch": 6,
+          "auc": 0.9458396688791314
+        },
+        {
+          "epoch": 7,
+          "auc": 0.9458928286344929
+        },
+        {
+          "epoch": 8,
+          "auc": 0.9460148492880438
+        },
+        {
+          "epoch": 9,
+          "auc": 0.9460066730722044
+        },
+        {
+          "epoch": 10,
+          "auc": 0.9460316844647941
+        },
+        {
+          "epoch": 11,
+          "auc": 0.9460082884935378
+        },
+        {
+          "epoch": 12,
+          "auc": 0.945763337360349
+        },
+        {
+          "epoch": 13,
+          "auc": 0.9461432181653505
+        },
+        {
+          "epoch": 14,
+          "auc": 0.9461844714373128
+        },
+        {
+          "epoch": 15,
+          "auc": 0.9462097435006038
+        },
+        {
+          "epoch": 16,
+          "auc": 0.946165021795492
+        },
+        {
+          "epoch": 17,
+          "auc": 0.9459900574484557
+        },
+        {
+          "epoch": 18,
+          "auc": 0.9460839365275344
+        },
+        {
+          "epoch": 19,
+          "auc": 0.9461465273643885
+        },
+        {
+          "epoch": 20,
+          "auc": 0.9461500962643711
+        },
+        {
+          "epoch": 21,
+          "auc": 0.9461538534911773
+        },
+        {
+          "epoch": 22,
+          "auc": 0.9461788032072171
+        }
+      ],
+      "args": {
+        "output": "artifacts/r3-tabm",
+        "folds": "1,2,3,4",
+        "epochs": 40,
+        "patience": 7,
+        "rate": 0.002,
+        "embedding": "linear",
+        "k": 8,
+        "width": 128
+      },
+      "seconds": 74.50165883499994,
+      "features": [
+        "Age",
+        "Annual_Income_USD",
+        "Daily_Commute_km",
+        "Number_of_Cars_Owned",
+        "Charging_Stations_Near_Home",
+        "Charging_Stations_Near_Work",
+        "Environmental_Concern_Level",
+        "recipe",
+        "worry",
+        "subsidy_income",
+        "subsidy_concern",
+        "Annual_Income_USD_digit_0",
+        "Annual_Income_USD_digit_1",
+        "Annual_Income_USD_digit_2",
+        "Annual_Income_USD_digit_3",
+        "income_bin100",
+        "income_bin1000",
+        "commute_bin1",
+        "Gender",
+        "City_Type",
+        "Current_Car_Type",
+        "Home_Charging_Possible",
+        "Subsidy_Available",
+        "Range_Anxiety_Level",
+        "Annual_Income_USD_frequency",
+        "Daily_Commute_km_frequency",
+        "Age_original_mean",
+        "Gender_original_mean",
+        "Annual_Income_USD_original_mean",
+        "City_Type_original_mean",
+        "Daily_Commute_km_original_mean",
+        "Number_of_Cars_Owned_original_mean",
+        "Current_Car_Type_original_mean",
+        "Charging_Stations_Near_Home_original_mean",
+        "Charging_Stations_Near_Work_original_mean",
+        "Home_Charging_Possible_original_mean",
+        "Environmental_Concern_Level_original_mean",
+        "Subsidy_Available_original_mean",
+        "Range_Anxiety_Level_original_mean",
+        "Annual_Income_USD_te0",
+        "Daily_Commute_km_te0",
+        "Annual_Income_USD_te1",
+        "Daily_Commute_km_te1"
+      ],
+      "source_sha256": "75cf9c0deffa0d53b832a61f53a0e5ba3f5322604942889da29f15ccc6fea5a0",
+      "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+      "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+      "torch_version": "2.11.0+cu128",
+      "early_stopping_on_scored_fold": true
+    },
+    {
+      "fold": 3,
+      "auc": 0.9456854689705564,
+      "log_loss": 0.21959581971168518,
+      "average_precision": 0.7789752148279274,
+      "best_epoch": 17,
+      "history": [
+        {
+          "epoch": 1,
+          "auc": 0.9440148812605467
+        },
+        {
+          "epoch": 2,
+          "auc": 0.9447132752852679
+        },
+        {
+          "epoch": 3,
+          "auc": 0.9449629956837448
+        },
+        {
+          "epoch": 4,
+          "auc": 0.9451541865879919
+        },
+        {
+          "epoch": 5,
+          "auc": 0.9453241411699856
+        },
+        {
+          "epoch": 6,
+          "auc": 0.9453179527621958
+        },
+        {
+          "epoch": 7,
+          "auc": 0.9453890155907969
+        },
+        {
+          "epoch": 8,
+          "auc": 0.9454342943243719
+        },
+        {
+          "epoch": 9,
+          "auc": 0.9454025565027679
+        },
+        {
+          "epoch": 10,
+          "auc": 0.945507568974907
+        },
+        {
+          "epoch": 11,
+          "auc": 0.9455437252036898
+        },
+        {
+          "epoch": 12,
+          "auc": 0.9455493612378505
+        },
+        {
+          "epoch": 13,
+          "auc": 0.9456469172478501
+        },
+        {
+          "epoch": 14,
+          "auc": 0.9455626005553717
+        },
+        {
+          "epoch": 15,
+          "auc": 0.9456452323919102
+        },
+        {
+          "epoch": 16,
+          "auc": 0.9456527169770047
+        },
+        {
+          "epoch": 17,
+          "auc": 0.9456854689705564
+        },
+        {
+          "epoch": 18,
+          "auc": 0.9456369421326388
+        },
+        {
+          "epoch": 19,
+          "auc": 0.9456741879804699
+        },
+        {
+          "epoch": 20,
+          "auc": 0.9456747343416052
+        },
+        {
+          "epoch": 21,
+          "auc": 0.9455885052881775
+        },
+        {
+          "epoch": 22,
+          "auc": 0.9455418142004005
+        },
+        {
+          "epoch": 23,
+          "auc": 0.94565400229303
+        },
+        {
+          "epoch": 24,
+          "auc": 0.9456814202347739
+        }
+      ],
+      "args": {
+        "output": "artifacts/r3-tabm",
+        "folds": "1,2,3,4",
+        "epochs": 40,
+        "patience": 7,
+        "rate": 0.002,
+        "embedding": "linear",
+        "k": 8,
+        "width": 128
+      },
+      "seconds": 67.87338420700053,
+      "features": [
+        "Age",
+        "Annual_Income_USD",
+        "Daily_Commute_km",
+        "Number_of_Cars_Owned",
+        "Charging_Stations_Near_Home",
+        "Charging_Stations_Near_Work",
+        "Environmental_Concern_Level",
+        "recipe",
+        "worry",
+        "subsidy_income",
+        "subsidy_concern",
+        "Annual_Income_USD_digit_0",
+        "Annual_Income_USD_digit_1",
+        "Annual_Income_USD_digit_2",
+        "Annual_Income_USD_digit_3",
+        "income_bin100",
+        "income_bin1000",
+        "commute_bin1",
+        "Gender",
+        "City_Type",
+        "Current_Car_Type",
+        "Home_Charging_Possible",
+        "Subsidy_Available",
+        "Range_Anxiety_Level",
+        "Annual_Income_USD_frequency",
+        "Daily_Commute_km_frequency",
+        "Age_original_mean",
+        "Gender_original_mean",
+        "Annual_Income_USD_original_mean",
+        "City_Type_original_mean",
+        "Daily_Commute_km_original_mean",
+        "Number_of_Cars_Owned_original_mean",
+        "Current_Car_Type_original_mean",
+        "Charging_Stations_Near_Home_original_mean",
+        "Charging_Stations_Near_Work_original_mean",
+        "Home_Charging_Possible_original_mean",
+        "Environmental_Concern_Level_original_mean",
+        "Subsidy_Available_original_mean",
+        "Range_Anxiety_Level_original_mean",
+        "Annual_Income_USD_te0",
+        "Daily_Commute_km_te0",
+        "Annual_Income_USD_te1",
+        "Daily_Commute_km_te1"
+      ],
+      "source_sha256": "75cf9c0deffa0d53b832a61f53a0e5ba3f5322604942889da29f15ccc6fea5a0",
+      "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+      "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+      "torch_version": "2.11.0+cu128",
+      "early_stopping_on_scored_fold": true
+    },
+    {
+      "fold": 4,
+      "auc": 0.9453835354935736,
+      "log_loss": 0.21966664493083954,
+      "average_precision": 0.777500600617715,
+      "best_epoch": 39,
+      "history": [
+        {
+          "epoch": 1,
+          "auc": 0.9438342389858441
+        },
+        {
+          "epoch": 2,
+          "auc": 0.9444793322525253
+        },
+        {
+          "epoch": 3,
+          "auc": 0.9446216313022923
+        },
+        {
+          "epoch": 4,
+          "auc": 0.9448073341573082
+        },
+        {
+          "epoch": 5,
+          "auc": 0.9448746692397182
+        },
+        {
+          "epoch": 6,
+          "auc": 0.9449597289600663
+        },
+        {
+          "epoch": 7,
+          "auc": 0.9449728290204716
+        },
+        {
+          "epoch": 8,
+          "auc": 0.9449758816217881
+        },
+        {
+          "epoch": 9,
+          "auc": 0.9450745809753774
+        },
+        {
+          "epoch": 10,
+          "auc": 0.9451282816612343
+        },
+        {
+          "epoch": 11,
+          "auc": 0.9451341731294083
+        },
+        {
+          "epoch": 12,
+          "auc": 0.9451908249799921
+        },
+        {
+          "epoch": 13,
+          "auc": 0.9452520903528778
+        },
+        {
+          "epoch": 14,
+          "auc": 0.9451681978321436
+        },
+        {
+          "epoch": 15,
+          "auc": 0.9452116588530599
+        },
+        {
+          "epoch": 16,
+          "auc": 0.9452680058120195
+        },
+        {
+          "epoch": 17,
+          "auc": 0.9452012822584202
+        },
+        {
+          "epoch": 18,
+          "auc": 0.9452057035748703
+        },
+        {
+          "epoch": 19,
+          "auc": 0.9451845754775066
+        },
+        {
+          "epoch": 20,
+          "auc": 0.9452459203704725
+        },
+        {
+          "epoch": 21,
+          "auc": 0.9451778077368407
+        },
+        {
+          "epoch": 22,
+          "auc": 0.9452505883931221
+        },
+        {
+          "epoch": 23,
+          "auc": 0.9452782511015513
+        },
+        {
+          "epoch": 24,
+          "auc": 0.9452415316378598
+        },
+        {
+          "epoch": 25,
+          "auc": 0.945289172117812
+        },
+        {
+          "epoch": 26,
+          "auc": 0.9452764035203747
+        },
+        {
+          "epoch": 27,
+          "auc": 0.9452463972970013
+        },
+        {
+          "epoch": 28,
+          "auc": 0.9453076764404374
+        },
+        {
+          "epoch": 29,
+          "auc": 0.9452688407728598
+        },
+        {
+          "epoch": 30,
+          "auc": 0.9452729573916375
+        },
+        {
+          "epoch": 31,
+          "auc": 0.9452207125050995
+        },
+        {
+          "epoch": 32,
+          "auc": 0.9453604178425973
+        },
+        {
+          "epoch": 33,
+          "auc": 0.9452839631646666
+        },
+        {
+          "epoch": 34,
+          "auc": 0.9452884952273748
+        },
+        {
+          "epoch": 35,
+          "auc": 0.9452003156045692
+        },
+        {
+          "epoch": 36,
+          "auc": 0.9452238564575324
+        },
+        {
+          "epoch": 37,
+          "auc": 0.9452182433096386
+        },
+        {
+          "epoch": 38,
+          "auc": 0.9452728962969419
+        },
+        {
+          "epoch": 39,
+          "auc": 0.9453835354935736
+        },
+        {
+          "epoch": 40,
+          "auc": 0.9452978268117919
+        }
+      ],
+      "args": {
+        "output": "artifacts/r3-tabm",
+        "folds": "1,2,3,4",
+        "epochs": 40,
+        "patience": 7,
+        "rate": 0.002,
+        "embedding": "linear",
+        "k": 8,
+        "width": 128
+      },
+      "seconds": 63.5289575529996,
+      "features": [
+        "Age",
+        "Annual_Income_USD",
+        "Daily_Commute_km",
+        "Number_of_Cars_Owned",
+        "Charging_Stations_Near_Home",
+        "Charging_Stations_Near_Work",
+        "Environmental_Concern_Level",
+        "recipe",
+        "worry",
+        "subsidy_income",
+        "subsidy_concern",
+        "Annual_Income_USD_digit_0",
+        "Annual_Income_USD_digit_1",
+        "Annual_Income_USD_digit_2",
+        "Annual_Income_USD_digit_3",
+        "income_bin100",
+        "income_bin1000",
+        "commute_bin1",
+        "Gender",
+        "City_Type",
+        "Current_Car_Type",
+        "Home_Charging_Possible",
+        "Subsidy_Available",
+        "Range_Anxiety_Level",
+        "Annual_Income_USD_frequency",
+        "Daily_Commute_km_frequency",
+        "Age_original_mean",
+        "Gender_original_mean",
+        "Annual_Income_USD_original_mean",
+        "City_Type_original_mean",
+        "Daily_Commute_km_original_mean",
+        "Number_of_Cars_Owned_original_mean",
+        "Current_Car_Type_original_mean",
+        "Charging_Stations_Near_Home_original_mean",
+        "Charging_Stations_Near_Work_original_mean",
+        "Home_Charging_Possible_original_mean",
+        "Environmental_Concern_Level_original_mean",
+        "Subsidy_Available_original_mean",
+        "Range_Anxiety_Level_original_mean",
+        "Annual_Income_USD_te0",
+        "Daily_Commute_km_te0",
+        "Annual_Income_USD_te1",
+        "Daily_Commute_km_te1"
+      ],
+      "source_sha256": "75cf9c0deffa0d53b832a61f53a0e5ba3f5322604942889da29f15ccc6fea5a0",
+      "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+      "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+      "torch_version": "2.11.0+cu128",
+      "early_stopping_on_scored_fold": true
+    }
+  ],
+  "train_sha256": "eae9eaa4e6378df405e755f853771d7e26d212bd93258349fc797b771021946a",
+  "test_sha256": "539263f6caabc40afd5e2f0bc0ab16b10a2d1177c565fc71b866f0181d836b34",
+  "early_stopping_on_scored_fold": true,
+  "artifacts": [
+    {
+      "file": "artifacts/r3-tabm/fold0.pt",
+      "sha256": "dc09641e55aeda3a2b61d1f6252c836b7261115b0dc28e697ef8776d450f04da"
+    },
+    {
+      "file": "artifacts/r3-tabm/fold1.pt",
+      "sha256": "8aa7b52ad02fb274c233abe1ce798f682482fa5dd3169d39a1fcd74995e7a1fd"
+    },
+    {
+      "file": "artifacts/r3-tabm/fold2.pt",
+      "sha256": "fa406013ee5db4aae9181dec1e456e8a44816edf04fbe1eeafe96add352c1e30"
+    },
+    {
+      "file": "artifacts/r3-tabm/fold3.pt",
+      "sha256": "30df055d761b3d8a87a86fe30d2c604717d7e8b5a4dd4e7479647f10662e26c0"
+    },
+    {
+      "file": "artifacts/r3-tabm/fold4.pt",
+      "sha256": "6737ca9b97cdc0b6fa30061f54c14209e96e1df020fa465410c4f7b29d4b80e3"
+    },
+    {
+      "file": "artifacts/r3-tabm/encoder0.joblib",
+      "sha256": "7b6cb408b284fa898d98c44a54a3e9dc18169d82bff074453eac28f907f64c51"
+    },
+    {
+      "file": "artifacts/r3-tabm/encoder1.joblib",
+      "sha256": "d595e5cd09d9d16f1119ee1299a465ec6f11a568c88b4f3ecaacc0bf0a62b98c"
+    },
+    {
+      "file": "artifacts/r3-tabm/encoder2.joblib",
+      "sha256": "39a0450bfc7d5949d7b36d2ca0a6ac3db095e84e4ab20e5384d431034f4ab436"
+    },
+    {
+      "file": "artifacts/r3-tabm/encoder3.joblib",
+      "sha256": "ad2440dbdda8556b9f0fd07e8e62dbf942bfcd91138ee5a57c6475a124478f7c"
+    },
+    {
+      "file": "artifacts/r3-tabm/encoder4.joblib",
+      "sha256": "4d5eef82e82c3c61b0ce8fda73ecc57059d2b6b19ec5dd0e37fa91c3e52c656e"
+    }
+  ]
+}

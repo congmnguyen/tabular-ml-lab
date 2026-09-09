@@ -11,6 +11,7 @@ from .pipeline import score
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--runs',nargs='+',required=True);p.add_argument('--output',required=True)
+    p.add_argument('--small-third',action='store_true',help='Screen a complementary third model at 0/5/10/20 percent')
     a=p.parse_args();out=Path(a.output);out.mkdir(exist_ok=True,parents=True)
     oofs=[pd.read_csv(Path(r)/'oof.csv') for r in a.runs]
     tests=[pd.read_csv(Path(r)/'submission.csv') for r in a.runs]
@@ -27,6 +28,9 @@ def main():
         configs.append(('rank',np.array([.5,.5])))
     else:
         configs.append(('probability',np.ones(len(a.runs))/len(a.runs)))
+    if a.small_third:
+        if len(a.runs)!=3:raise ValueError('--small-third requires exactly three runs')
+        configs=[(kind,np.array([(1-w)/2,(1-w)/2,w])) for kind in ['probability','rank'] for w in [0.,.05,.1,.2]]
     results=[];best=None
     for kind,weights in configs:
         pred=np.zeros(len(y));test_pred=np.zeros(len(tests[0]))

@@ -31,3 +31,42 @@ Reproduction (from the repository root):
 .venv/bin/python -m src.original_augmentation --output artifacts/r3-original-aug --model lgb --folds 0 --rounds 6000
 .venv/bin/python -m src.screen_round3
 ```
+
+## Neural and native-category follow-up
+
+The first TabM screen reached **0.944390780** (best epoch 16). A fixed 10% probability blend with the two-tree reference reached **0.945119157**, a +0.000028799 development-fold gain. This is the strongest complementary result so far and motivates checking the other four folds. Reloading its checkpoint and preprocessing reproduced all 286,571 test predictions within 2.99e-8 after CSV serialization; see `neural-inference-check.json`.
+
+A second TabM screen tests piecewise-linear numeric embeddings with 32 members and width 256. This changes both representation and capacity, so it is a candidate comparison rather than an isolated causal ablation. Quantile bin edges are fitted on the outer training data only. The numerical embedding implementation comes from [the authors' package](https://github.com/yandex-research/rtdl-num-embeddings).
+
+A separate XGBoost screen treats repeated exact income and commute values as native categorical features in addition to existing numeric/target-encoded views. This tests node-specific category partitions instead of fixed marginal target statistics. [XGBoost's categorical documentation](https://xgboost.readthedocs.io/en/stable/tutorials/categorical.html) describes these partitions. Category names are strings; unseen values become missing under the fitted category vocabulary. The first attempt exposed unsupported floating-point category names and was fixed before any successful fit.
+
+Optional neural reproduction:
+
+```bash
+uv pip install --python .venv/bin/python torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+uv pip install --python .venv/bin/python -r requirements-neural.txt
+.venv/bin/python -m src.neural --output artifacts/new-tabm --folds 0,1,2,3,4
+.venv/bin/python -m src.collect_folds --run artifacts/new-tabm
+.venv/bin/python -m src.predict_neural --run artifacts/new-tabm --fold 0 --output artifacts/new-tabm/reloaded-fold0.csv
+```
+
+The native-category XGBoost run reached 0.943596689 and did not improve the reference blend. The larger piecewise TabM reached 0.944321441; its best screened 10% blend (0.945117706) was slightly below the smaller TabM blend, with substantially higher runtime. We expanded the smaller linear-embedding TabM to five folds; this comparison does not establish that one embedding type is generally superior.
+
+## Five-fold result
+
+The smaller TabM completed five folds with pooled OOF AUC **0.945174002**. We screened 0%, 5%, 10% and 20% TabM weights, keeping the remaining weight split equally between the existing LightGBM and XGBoost, for probability and rank blending.
+
+The selected **40% LightGBM / 40% XGBoost / 20% TabM rank blend** reached mean fold AUC **0.946065777** and pooled OOF AUC **0.946066061**, versus the previous rank blend's mean **0.946020747**. The mean increase is **0.000045030**, with positive gains on all five folds. The overall experiment includes nine successful run configurations and thirteen fold fits, plus the documented failed categorical-dtype attempt.
+
+![Measured blend gains](blend-validation.png)
+
+These small, consistent development gains justify one submission, but do not establish a statistically significant improvement or guarantee an increase on the public/private leaderboard. Checkpoint provenance and complete fold histories are saved in `runs/`; the eight full-OOF blend candidates and selected weights are in `selected.json`. No claims are based on the private leaderboard.
+
+
+## Submission and verification
+
+Submission **56120517**, submitted on **2026-09-09 at 10:41:50 UTC**, scored **0.94618** publicly, tying the previous best. The requested **0.94672** target remains unbeaten, with a **0.00054** public AUC gap. We did not adjust blend weights or submit additional variants in response to this public score. The older two-tree blend remains the simpler incumbent; the neural blend has better development CV but no demonstrated public-score advantage.
+
+Independent inference from all fifteen saved fold models reproduced the entire **286,571-row** submission **exactly** (maximum absolute difference 0, identical SHA-256). Both files passed ID-order, row-count, finite-probability and range validation. All **six automated tests** passed. The fold-zero neural reload check is recorded separately; its tiny difference comes from float32 CSV serialization. Public submission history is in `submissions.json`; final private scores are unavailable.
+
+The useful outcome of this round is a reproducible neural complement with consistent development-fold gains, and negative evidence for conditional keys, direct source-row augmentation and native exact-value partitions under the tested settings. The public result does not support claiming that this round improved the leaderboard score.

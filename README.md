@@ -2,13 +2,13 @@
 
 A reproducible binary tabular classification pipeline, demonstrated on **Kaggle Playground S6E9 — Predicting Electric Vehicle Purchases**.
 
-The case study compares Logistic Regression, LightGBM and CatBoost on identical folds, tests two feature/model hypotheses, and records OOF metrics, error analysis and Kaggle submissions. The focus is traceable experiments and reliable preprocessing.
+The case study compares linear, boosting and neural models on identical folds, investigates the synthetic data source, and records OOF metrics, error analysis and Kaggle submissions. The focus is traceable experiments and reliable preprocessing.
 
 ## Results
 
 **Best submitted public AUC: 0.94618**, from a 50:50 rank blend of expert-informed LightGBM and XGBoost (development mean five-fold AUC 0.946021). The requested leaderboard target of 0.94672 has not been exceeded.
 
-[Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json).
+[Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json). The [round 3 report](reports/round3/report.md) adds nine run configurations and a five-fold TabM ensemble: development mean AUC increased to 0.946066, while its public submission tied 0.94618. The simpler two-tree blend remains the incumbent.
 
 The initial pipeline below remains a simpler, inductive baseline: LightGBM with charging/commute features scored 0.94160 publicly; Logistic Regression scored 0.93738. Its original five configurations and 25 fold fits are preserved.
 
@@ -16,7 +16,7 @@ See the [experiment report](reports/ev-purchases.md), [predefined experiment pla
 
 ## Quickstart
 
-Python 3.12 and a CPU are sufficient. The completed case study used eight threads per model on a Linux machine with 22 GiB RAM. Dependencies are pinned; the GPU was not used.
+Python 3.12 and a CPU are sufficient for the initial pipeline. Experiments ran on Linux with 22 GiB RAM; later XGBoost, native CatBoost and TabM experiments also used an RTX 4060. Base dependencies are pinned in `requirements.txt`; optional neural dependencies are in `requirements-neural.txt`.
 
 ```bash
 uv venv --python 3.12

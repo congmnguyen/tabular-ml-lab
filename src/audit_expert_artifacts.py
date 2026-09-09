@@ -1,4 +1,5 @@
 """Export compact provenance from the actual saved estimators and encoders."""
+import argparse
 import inspect
 import json
 from pathlib import Path
@@ -7,8 +8,12 @@ from .pipeline import digest
 
 
 def main():
-    report=Path('reports/round2/runs');report.mkdir(exist_ok=True,parents=True)
-    for run in sorted(Path('artifacts').glob('r2-*')):
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--prefix',default='r2')
+    parser.add_argument('--report',default='reports/round2/runs')
+    args=parser.parse_args()
+    report=Path(args.report);report.mkdir(exist_ok=True,parents=True)
+    for run in sorted(Path('artifacts').glob(args.prefix+'-*')):
         if not run.is_dir():continue
         if (run/'blend.json').exists():
             (report/f'{run.name}.json').write_text((run/'blend.json').read_text());continue
