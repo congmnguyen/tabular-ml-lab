@@ -1,0 +1,288 @@
+{
+  "results": [
+    {
+      "name": "baseline",
+      "seed": 17,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9460360679147899,
+        "log_loss": 0.21845650672912598,
+        "average_precision": 0.7794924358168138
+      },
+      "seconds": 37.14608418200078,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "joint",
+      "seed": 17,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9460354108133501,
+        "log_loss": 0.21847163140773773,
+        "average_precision": 0.778940097102211
+      },
+      "seconds": 48.25237756599927,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "source",
+      "seed": 17,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9460941511824423,
+        "log_loss": 0.218377023935318,
+        "average_precision": 0.7793712614373682
+      },
+      "seconds": 36.90004461600074,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "baseline",
+      "seed": 91,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9455758913202441,
+        "log_loss": 0.2192644327878952,
+        "average_precision": 0.7790885599427908
+      },
+      "seconds": 36.57089685199935,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "joint",
+      "seed": 91,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9455239896160781,
+        "log_loss": 0.21934230625629425,
+        "average_precision": 0.77889542494057
+      },
+      "seconds": 48.922148294999715,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "source",
+      "seed": 91,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9456165129123256,
+        "log_loss": 0.21917980909347534,
+        "average_precision": 0.7791988364385193
+      },
+      "seconds": 37.27895519999947,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "baseline",
+      "seed": 2026,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9483007839311721,
+        "log_loss": 0.21405504643917084,
+        "average_precision": 0.7887434395361765
+      },
+      "seconds": 35.65760624399991,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "joint",
+      "seed": 2026,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9482338829362877,
+        "log_loss": 0.214194193482399,
+        "average_precision": 0.7881870437779264
+      },
+      "seconds": 50.66251766999994,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    },
+    {
+      "name": "source",
+      "seed": 2026,
+      "train_rows": 601798,
+      "validation_rows": 66867,
+      "metrics": {
+        "auc": 0.9482913222910769,
+        "log_loss": 0.214081272482872,
+        "average_precision": 0.7885753814320848
+      },
+      "seconds": 38.282415308000054,
+      "model_params": {
+        "n_estimators": 600,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "min_child_weight": 5,
+        "max_bin": 512,
+        "device": "cuda",
+        "tree_method": "hist",
+        "eval_metric": "auc",
+        "n_jobs": 8,
+        "random_state": 42
+      },
+      "script_sha256": "c7c1b7e658eb9cd680f7ad62a0a0c0251ef78f2eb70fc6167e50f6e571624e67"
+    }
+  ],
+  "paired_differences": [
+    {
+      "seed": 17,
+      "baseline_auc": 0.9460360679147899,
+      "joint_auc_gain": -6.571014398160102e-07,
+      "source_auc_gain": 5.8083267652442316e-05
+    },
+    {
+      "seed": 91,
+      "baseline_auc": 0.9455758913202441,
+      "joint_auc_gain": -5.190170416602413e-05,
+      "source_auc_gain": 4.062159208151339e-05
+    },
+    {
+      "seed": 2026,
+      "baseline_auc": 0.9483007839311721,
+      "joint_auc_gain": -6.690099488437795e-05,
+      "source_auc_gain": -9.461640095187462e-06
+    }
+  ],
+  "mean_joint_gain": -3.981993349673937e-05,
+  "mean_source_gain": 2.9747739879589414e-05,
+  "caveat": "Same rows within each comparison, fixed 600 trees, no early stopping. Overlapping repeated holdouts and previously used data are development robustness checks, not independent final-test replicates. No Kaggle submission from partial holdouts."
+}

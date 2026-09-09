@@ -1,0 +1,206 @@
+{
+  "results": [
+    {
+      "seed": 17,
+      "baseline": {
+        "auc": 0.9460360679147899,
+        "log_loss": 0.21845650672912598,
+        "average_precision": 0.7794924358168138
+      },
+      "matched_support_average": {
+        "auc": 0.9460219894970456,
+        "log_loss": 0.21849836878331874,
+        "average_precision": 0.7792003844481032
+      },
+      "auc_gain": -1.4078417744256555e-05,
+      "frequency_groups": [
+        {
+          "income_count": "unseen",
+          "rows": 408,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 6.139278312389251e-07,
+            "Daily_Commute_km_te0": 0.004350840871104404,
+            "income_mod1000_te0": 0.007108342283697351
+          },
+          "mean_absolute_prediction_change": 0.0021096194713153284
+        },
+        {
+          "income_count": "1-4",
+          "rows": 710,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.027370380456690595,
+            "Daily_Commute_km_te0": 0.004152085402853235,
+            "income_mod1000_te0": 0.006820240798443708
+          },
+          "mean_absolute_prediction_change": 0.004539414946401646
+        },
+        {
+          "income_count": "5-19",
+          "rows": 1617,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.026243412250063193,
+            "Daily_Commute_km_te0": 0.004147198161520997,
+            "income_mod1000_te0": 0.008650867097165274
+          },
+          "mean_absolute_prediction_change": 0.004398232190129815
+        },
+        {
+          "income_count": "20-99",
+          "rows": 22675,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.018343548998370394,
+            "Daily_Commute_km_te0": 0.004206630496904412,
+            "income_mod1000_te0": 0.006955733444437484
+          },
+          "mean_absolute_prediction_change": 0.002855456594535222
+        },
+        {
+          "income_count": "100+",
+          "rows": 41457,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.008938540825275612,
+            "Daily_Commute_km_te0": 0.0041437524017290716,
+            "income_mod1000_te0": 0.004717836993157571
+          },
+          "mean_absolute_prediction_change": 0.002050853639739368
+        }
+      ]
+    },
+    {
+      "seed": 91,
+      "baseline": {
+        "auc": 0.9455758913202441,
+        "log_loss": 0.2192644327878952,
+        "average_precision": 0.7790885599427908
+      },
+      "matched_support_average": {
+        "auc": 0.9455963064612007,
+        "log_loss": 0.21923140654282403,
+        "average_precision": 0.7791080585606667
+      },
+      "auc_gain": 2.0415140956631106e-05,
+      "frequency_groups": [
+        {
+          "income_count": "unseen",
+          "rows": 409,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 6.139278312389251e-07,
+            "Daily_Commute_km_te0": 0.004440773544998563,
+            "income_mod1000_te0": 0.006709553557162565
+          },
+          "mean_absolute_prediction_change": 0.0019763360190985175
+        },
+        {
+          "income_count": "1-4",
+          "rows": 726,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.02756484338767394,
+            "Daily_Commute_km_te0": 0.004207380130405934,
+            "income_mod1000_te0": 0.006778800070865258
+          },
+          "mean_absolute_prediction_change": 0.00496317391970193
+        },
+        {
+          "income_count": "5-19",
+          "rows": 1625,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.0263870940460637,
+            "Daily_Commute_km_te0": 0.00416283575844381,
+            "income_mod1000_te0": 0.00911330054851907
+          },
+          "mean_absolute_prediction_change": 0.004470949961992144
+        },
+        {
+          "income_count": "20-99",
+          "rows": 22603,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.01850190479417646,
+            "Daily_Commute_km_te0": 0.004084829603466353,
+            "income_mod1000_te0": 0.007009489973494138
+          },
+          "mean_absolute_prediction_change": 0.002613790670911706
+        },
+        {
+          "income_count": "100+",
+          "rows": 41504,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.009009570301818409,
+            "Daily_Commute_km_te0": 0.004058310704952017,
+            "income_mod1000_te0": 0.004797778916764537
+          },
+          "mean_absolute_prediction_change": 0.0017431553608874373
+        }
+      ]
+    },
+    {
+      "seed": 2026,
+      "baseline": {
+        "auc": 0.9483007839311721,
+        "log_loss": 0.21405504643917084,
+        "average_precision": 0.7887434395361765
+      },
+      "matched_support_average": {
+        "auc": 0.9483446522405217,
+        "log_loss": 0.21398650998973867,
+        "average_precision": 0.7889710911453688
+      },
+      "auc_gain": 4.386830934954844e-05,
+      "frequency_groups": [
+        {
+          "income_count": "unseen",
+          "rows": 414,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 6.139278312389251e-07,
+            "Daily_Commute_km_te0": 0.004037236712539548,
+            "income_mod1000_te0": 0.007195589006339214
+          },
+          "mean_absolute_prediction_change": 0.002128795290197109
+        },
+        {
+          "income_count": "1-4",
+          "rows": 675,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.02692585980747294,
+            "Daily_Commute_km_te0": 0.004352940746728635,
+            "income_mod1000_te0": 0.007141020426076705
+          },
+          "mean_absolute_prediction_change": 0.004618017361821424
+        },
+        {
+          "income_count": "5-19",
+          "rows": 1599,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.026893575598877145,
+            "Daily_Commute_km_te0": 0.003966816639638891,
+            "income_mod1000_te0": 0.008921503837622002
+          },
+          "mean_absolute_prediction_change": 0.004446009501607418
+        },
+        {
+          "income_count": "20-99",
+          "rows": 22267,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.018543160150342297,
+            "Daily_Commute_km_te0": 0.004005152713962534,
+            "income_mod1000_te0": 0.0070871720714864705
+          },
+          "mean_absolute_prediction_change": 0.0030872915460927464
+        },
+        {
+          "income_count": "100+",
+          "rows": 41912,
+          "mean_absolute_encoding_change": {
+            "Annual_Income_USD_te0": 0.008955237853366714,
+            "Daily_Commute_km_te0": 0.003941847961845343,
+            "income_mod1000_te0": 0.004865946697494021
+          },
+          "mean_absolute_prediction_change": 0.0022485885700755954
+        }
+      ]
+    }
+  ],
+  "mean_auc_gain": 1.673501085397433e-05,
+  "passes_expansion_gate": false,
+  "script_sha256": "3698346116fda16e453e15cd816382c50b50e2169dd425e5e9f516f04250f2ca",
+  "protocol": "Five fixed 80%-support inner encoders, average model probabilities. No validation labels enter fit. Models unchanged; frequency/source/non-TE features unchanged. Overlapping development holdouts; not independent final tests."
+}

@@ -132,3 +132,5 @@ Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition ru
 [Round 9 report](reports/round9/report.md): joint income/commute effects improved ensemble OOF, but public AUC was **0.94631**. Best public result remains round seven (**0.94632**).
 
 [Round 10 report](reports/round10/report.md): label-free controls find multi-column source associations on both train and test, but explicit source-context features add insufficient OOF gain; no submission.
+
+[Round 11 report](reports/round11/report.md): nine fixed-budget fits test stability across three repeated holdouts; target-encoding support matching is inconsistent and does not pass the expansion gate. Best public AUC remains **0.94632**.
