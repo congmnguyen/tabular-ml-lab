@@ -136,3 +136,5 @@ Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition ru
 [Round 11 report](reports/round11/report.md): nine fixed-budget fits test stability across three repeated holdouts; target-encoding support matching is inconsistent and does not pass the expansion gate. Best public AUC remains **0.94632**.
 
 [Round 12 report](reports/round12/report.md): five feature-family ablations across three holdouts; removing source means passed the screen but did not produce sufficient full-OOF improvement. No new submission.
+
+[Next-direction research](reports/next-direction-research/report.md): primary-source review recommends a controlled RealMLP experiment with learned embeddings for repeated numeric identities; no new training or submission in this research pass.

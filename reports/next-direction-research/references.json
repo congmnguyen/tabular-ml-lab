@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.kaggle.com/code/yekenot/ps-s6-e9-realmlp-pytorch",
+    "sha256": "0cf3654121bee6efb8507dccf33dd60e6369c00c6f2c5ecf75a09e2e6d5d47f0",
+    "cells_with_stored_outputs": 0,
+    "executed_by_us": false
+  },
+  {
+    "url": "https://www.kaggle.com/code/maiernator/s6e9-ctboost-not-catboost-astra-baseline",
+    "sha256": "8be50ee48483f1b24fa1a30940c6e7b5a1183fb2b174d57b37e58f9a25568954",
+    "cells_with_stored_outputs": 0,
+    "executed_by_us": false
+  },
+  {
+    "url": "https://www.kaggle.com/code/najiama/pure-lgbm-model-cv-0-94606-lb-0-94637",
+    "sha256": "53a9fc1bc38b2d613ebb0ef77f2480507a9606ff26e697f85f1363279db50a1a",
+    "cells_with_stored_outputs": 0,
+    "executed_by_us": false
+  },
+  {
+    "url": "https://www.kaggle.com/code/chovyxu/ev-adoption-tokens-xgboost-tinytokentransformer",
+    "sha256": "dcace943640ee3a6ff44d181b7a40c6c321423831d8f3e318f8a280820ba9711",
+    "cells_with_stored_outputs": 0,
+    "executed_by_us": false
+  }
+]
