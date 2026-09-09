@@ -1,0 +1,7 @@
+{
+  "src/frozen_diagnostic.py": "961c834947b59de333cf51072534fd1f24e7922bd6238ca85b120e313b620122",
+  "src/audit_interactions.py": "28bfae90021b5187dbdc44825354a691b7ca07419fa353d06f1206780760b6e6",
+  "artifacts/r5-frozen-diagnostic/model.joblib": "1272dbee911510189ea434de959f8e99e6a564f0cfa63705d542c74b83cd97e0",
+  "artifacts/r5-frozen-diagnostic/heldout.csv": "35250539a3bf899688b36451b4dfdb23f71535a73964d2df5135a7983123df8d",
+  "artifacts/r4-offset/oof.csv": "b8e531d815e7812dec65a1179fcee6f4dce23c4aea5f99de7d4b0276e5a58c29"
+}

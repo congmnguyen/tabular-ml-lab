@@ -8,7 +8,7 @@ The case study compares linear, boosting and neural models on identical folds, i
 
 **Best submitted public AUC: 0.94624**, from a rank blend of LightGBM (45%), XGBoost trained with a fold-fitted probit offset (45%) and TabM (10%). Development mean five-fold AUC is 0.946126. The requested leaderboard target of 0.94672 has not been exceeded.
 
-[Round 4 report](reports/round4/report.md) documents the mechanism audit, conditional permutation diagnostics, failed risk-adjusted encoding, five-fold improvements and the new public best. [Current selected blend](reports/round4/selected.json).
+[Round 4 report](reports/round4/report.md) documents the mechanism audit, conditional permutation diagnostics, failed risk-adjusted encoding, five-fold improvements and the new public best. [Current selected blend](reports/round4/selected.json). The [round 5 diagnostic](reports/round5/report.md) checks whether income-specific subgroup errors replicate on two held-out sets; the evidence did not justify adding conditional encodings.
 
 [Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json). The [round 3 report](reports/round3/report.md) adds nine run configurations and a five-fold TabM ensemble: development mean AUC increased to 0.946066, while its public submission tied 0.94618. These earlier blends are retained as historical baselines.
 

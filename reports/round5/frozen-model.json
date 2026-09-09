@@ -1,0 +1,32 @@
+{
+  "training_folds": [
+    0,
+    1,
+    2
+  ],
+  "discovery_fold": 3,
+  "confirmation_fold": 4,
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.03,
+    "max_depth": 5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 10.0,
+    "reg_alpha": 1.0,
+    "min_child_weight": 5,
+    "max_bin": 512,
+    "device": "cuda",
+    "tree_method": "hist",
+    "eval_metric": "auc",
+    "n_jobs": 8,
+    "random_state": 42
+  },
+  "heldout_metrics": {
+    "auc": 0.9458863262678505,
+    "log_loss": 0.21872547268867493,
+    "average_precision": 0.7786726997382223
+  },
+  "source_sha256": "961c834947b59de333cf51072534fd1f24e7922bd6238ca85b120e313b620122",
+  "caveat": "Fixed 600-tree budget informed by earlier development runs; this is a diagnostic split, not a new pristine final test."
+}
