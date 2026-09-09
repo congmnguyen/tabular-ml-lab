@@ -1,0 +1,84 @@
+{
+  "training_folds": [
+    0,
+    1,
+    2
+  ],
+  "discovery_fold": 3,
+  "confirmation_fold": 4,
+  "fixed_model_trees": 600,
+  "tree_depth": 3,
+  "minimum_leaf_rows": 3000,
+  "leaf_ridge": 20,
+  "correction_step": 0.5,
+  "baseline_confirmation": {
+    "auc": 0.9459040979874945,
+    "log_loss": 0.21870715754670972,
+    "average_precision": 0.7786234634356702
+  },
+  "corrected_confirmation": {
+    "auc": 0.9459152191616153,
+    "log_loss": 0.21867625384260472,
+    "average_precision": 0.7786551741337131
+  },
+  "auc_gain": 1.1121174120720667e-05,
+  "leaves": [
+    {
+      "leaf": 1,
+      "discovery_rows": 3015,
+      "discovery_effect": 0.04938750480351532,
+      "current_confirmation_effect": -0.000529230746351128,
+      "older_confirmation_effect": -0.0005570708350622769,
+      "confirmation_rows": 3025,
+      "confirmation_positive_count": 0,
+      "confirmation_observed_rate": 0.0,
+      "confirmation_predicted_rate": 3.5008990303348756e-06
+    },
+    {
+      "leaf": 4,
+      "discovery_rows": 34053,
+      "discovery_effect": -0.15324742322682686,
+      "current_confirmation_effect": -0.09507673719991555,
+      "older_confirmation_effect": -0.09035284836832448,
+      "confirmation_rows": 34402,
+      "confirmation_positive_count": 801,
+      "confirmation_observed_rate": 0.023283530027323994,
+      "confirmation_predicted_rate": 0.025473557378912968
+    },
+    {
+      "leaf": 5,
+      "discovery_rows": 15512,
+      "discovery_effect": -0.04548784617206758,
+      "current_confirmation_effect": -0.011853943340934632,
+      "older_confirmation_effect": -0.008164439855063136,
+      "confirmation_rows": 15357,
+      "confirmation_positive_count": 8309,
+      "confirmation_observed_rate": 0.5410561958715895,
+      "confirmation_predicted_rate": 0.5432838864857069
+    },
+    {
+      "leaf": 7,
+      "discovery_rows": 4718,
+      "discovery_effect": -0.12435667577979537,
+      "current_confirmation_effect": -0.07088943284218129,
+      "older_confirmation_effect": -0.07930796299259853,
+      "confirmation_rows": 4707,
+      "confirmation_positive_count": 1063,
+      "confirmation_observed_rate": 0.22583386445719142,
+      "confirmation_predicted_rate": 0.23048687164576404
+    },
+    {
+      "leaf": 8,
+      "discovery_rows": 76435,
+      "discovery_effect": 0.01350127219231381,
+      "current_confirmation_effect": -0.0037891807045101044,
+      "older_confirmation_effect": -0.003938727035684433,
+      "confirmation_rows": 76242,
+      "confirmation_positive_count": 13183,
+      "confirmation_observed_rate": 0.17290994464993048,
+      "confirmation_predicted_rate": 0.17317598842619816
+    }
+  ],
+  "source_sha256": "bccab4546f59fab17722802fa72e5e65b6269a1f39f94ced74dbe80063829e17",
+  "caveat": "Both frozen models exclude discovery and confirmation labels from training. These diagnostic holdouts were examined in previous rounds and are not pristine final tests. Tree structure and corrections are fitted only on discovery. One fixed diagnostic configuration; no confirmation-driven tree tuning."
+}

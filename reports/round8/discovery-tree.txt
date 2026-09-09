@@ -1,0 +1,13 @@
+|--- recipe <= 1.16007
+|   |--- value: [32.39815]
+|--- recipe >  1.16007
+|   |--- Charging_Stations_Near_Work <= 4.50000
+|   |   |--- recipe <= 4.81510
+|   |   |   |--- value: [-0.15728]
+|   |   |--- recipe >  4.81510
+|   |   |   |--- value: [-0.04580]
+|   |--- Charging_Stations_Near_Work >  4.50000
+|   |   |--- income_training_count <= 16.50000
+|   |   |   |--- value: [-0.13276]
+|   |   |--- income_training_count >  16.50000
+|   |   |   |--- value: [0.01355]
