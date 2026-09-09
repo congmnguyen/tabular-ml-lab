@@ -1,0 +1,45 @@
+{
+  "train_rows": 668665,
+  "test_rows": 286571,
+  "features": 13,
+  "positive_rate": 0.17464500160768098,
+  "missing_train": {
+    "id": 0,
+    "Age": 0,
+    "Annual_Income_USD": 0,
+    "Daily_Commute_km": 0,
+    "Number_of_Cars_Owned": 0,
+    "Charging_Stations_Near_Home": 0,
+    "Charging_Stations_Near_Work": 0,
+    "Environmental_Concern_Level": 0,
+    "Gender": 0,
+    "City_Type": 0,
+    "Current_Car_Type": 0,
+    "Home_Charging_Possible": 0,
+    "Subsidy_Available": 0,
+    "Range_Anxiety_Level": 0,
+    "Will_Buy_EV": 0
+  },
+  "missing_test": {
+    "id": 0,
+    "Age": 0,
+    "Annual_Income_USD": 0,
+    "Daily_Commute_km": 0,
+    "Number_of_Cars_Owned": 0,
+    "Charging_Stations_Near_Home": 0,
+    "Charging_Stations_Near_Work": 0,
+    "Environmental_Concern_Level": 0,
+    "Gender": 0,
+    "City_Type": 0,
+    "Current_Car_Type": 0,
+    "Home_Charging_Possible": 0,
+    "Subsidy_Available": 0,
+    "Range_Anxiety_Level": 0
+  },
+  "duplicate_train_features": 0,
+  "overlapping_ids": 0,
+  "target_counts": {
+    "No": 551886,
+    "Yes": 116779
+  }
+}

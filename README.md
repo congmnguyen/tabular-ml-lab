@@ -6,6 +6,8 @@ The case study compares Logistic Regression, LightGBM and CatBoost on identical 
 
 ## Results
 
+**Selected model: LightGBM with charging/commute features — mean 5-fold AUC 0.941800, public Kaggle AUC 0.94160.** Logistic baseline public AUC: 0.93738. Five configurations and 25 fold fits completed.
+
 See the [experiment report](reports/ev-purchases.md), [predefined experiment plan](reports/experiment-plan.md), and [submission record](reports/submissions.md). Metrics come from executed runs; the competition's final private leaderboard is not yet available.
 
 ## Quickstart

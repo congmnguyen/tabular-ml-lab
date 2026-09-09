@@ -2,7 +2,6 @@
 import argparse
 import json
 from pathlib import Path
-import shutil
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -63,17 +62,17 @@ def main():
     lines += ['', '## Error analysis', '',
               'The following diagnostics use selected-model OOF probabilities. A threshold of 0.5 is used only to describe errors, not as an optimized business decision rule.', '',
               f'Confusion matrix [[TN, FP], [FN, TP]] at 0.5: `{confusion_matrix(y,p >= .5).tolist()}`.', '',
-              '| Segment | Value | Rows | Positive rate | AUC | Log loss |', '|---|---|---:|---:|---:|---:|']
+              '| Segment | Value | Rows | Positives | Positive rate | AUC | Log loss |', '|---|---|---:|---:|---:|---:|---:|']
     segments=[]
     for col in ['City_Type','Gender','Home_Charging_Possible','Range_Anxiety_Level']:
         for value, group in train.groupby(col, dropna=False):
             ix = group.index
             auc = roc_auc_score(y.iloc[ix], p.iloc[ix]) if y.iloc[ix].nunique()==2 else float('nan')
-            row = dict(segment=col,value=str(value),rows=len(ix),positive_rate=float(y.iloc[ix].mean()),auc=float(auc),log_loss=float(log_loss(y.iloc[ix],p.iloc[ix],labels=[0,1])))
+            row = dict(segment=col,value=str(value),rows=len(ix),positives=int(y.iloc[ix].sum()),positive_rate=float(y.iloc[ix].mean()),auc=float(auc),log_loss=float(log_loss(y.iloc[ix],p.iloc[ix],labels=[0,1])))
             segments.append(row)
-            lines.append(f"| {col} | {value} | {len(ix):,} | {row['positive_rate']:.3f} | {auc:.6f} | {row['log_loss']:.6f} |")
+            lines.append(f"| {col} | {value} | {len(ix):,} | {row['positives']:,} | {row['positive_rate']:.3f} | {auc:.6f} | {row['log_loss']:.6f} |")
     (out/'segments.json').write_text(json.dumps(segments,indent=2)+'\n')
-    lines += ['', 'Segment differences are descriptive, depend on class prevalence and difficulty, and do not establish causal effects or fairness. Synthetic data can contain generator artifacts.', '',
+    lines += ['', 'Rural rows have lower AUC than Urban rows, and the Medium range-anxiety segment has lower AUC than Low. These are candidates for further error inspection, not evidence that a new feature will help. High range-anxiety has very few positives; its apparently strong AUC should not be treated as stable.', '', 'Segment differences are descriptive, depend on class prevalence and difficulty, and do not establish causal effects or fairness. Synthetic data can contain generator artifacts.', '',
               '![Calibration](calibration.png)', '',
               '## Reproducibility and limitations', '',
               '- Full configs, source/data/fold SHA-256 fingerprints, Git revision, and individual fold metrics are in [metrics](metrics/). Dependencies are pinned in requirements.txt.',
@@ -83,9 +82,10 @@ def main():
               '- AUC measures ranking; probability calibration and practical thresholds require further independent validation.',
               '- Final private leaderboard results are unavailable while the competition is open. No final rank or medal is claimed.', '']
     (out/'ev-purchases.md').write_text('\n'.join(lines))
-    names=list(runs)
+    names=sorted(runs, key=lambda n:runs[n]['auc_mean'])
     fig, ax=plt.subplots(figsize=(9,4))
-    ax.barh(names,[runs[n]['auc_mean'] for n in names],xerr=[runs[n]['auc_std'] for n in names])
+    ax.errorbar([runs[n]['auc_mean'] for n in names], range(len(names)), xerr=[runs[n]['auc_std'] for n in names], fmt='o', capsize=4)
+    ax.set_yticks(range(len(names)), names)
     ax.set_xlim(min(r['auc_mean'] for r in runs.values())-.003,max(r['auc_mean'] for r in runs.values())+.002)
     ax.set_xlabel('Mean fold ROC-AUC ± one fold SD (not a confidence interval)')
     fig.tight_layout(); fig.savefig(out/'cv-comparison.png',dpi=160); plt.close(fig)

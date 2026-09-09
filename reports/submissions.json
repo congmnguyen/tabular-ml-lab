@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "56119531",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 09:48:26.723000",
+    "description": "ml-template: CV-selected LightGBM charging/commute features; mean 5-fold AUC 0.941800; seed 42",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.94160",
+    "privateScore": ""
+  },
+  {
+    "ref": "56119454",
+    "fileName": "submission.csv",
+    "date": "2026-09-09 09:43:59.893000",
+    "description": "ml-template: logistic baseline, 5 fixed folds, seed 42, train-fold preprocessing",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": "0.93738",
+    "privateScore": ""
+  }
+]

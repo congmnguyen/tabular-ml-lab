@@ -1,0 +1,101 @@
+[
+  {
+    "segment": "City_Type",
+    "value": "Rural",
+    "rows": 123983,
+    "positives": 23977,
+    "positive_rate": 0.1933894162909431,
+    "auc": 0.9368425726545493,
+    "log_loss": 0.24611387259405523
+  },
+  {
+    "segment": "City_Type",
+    "value": "Suburban",
+    "rows": 255377,
+    "positives": 46207,
+    "positive_rate": 0.1809364194896173,
+    "auc": 0.941162844279714,
+    "log_loss": 0.23141708171768358
+  },
+  {
+    "segment": "City_Type",
+    "value": "Urban",
+    "rows": 289305,
+    "positives": 46595,
+    "positive_rate": 0.1610583985758974,
+    "auc": 0.9442455702014712,
+    "log_loss": 0.21395264599787042
+  },
+  {
+    "segment": "Gender",
+    "value": "Female",
+    "rows": 295427,
+    "positives": 52480,
+    "positive_rate": 0.17764117700819493,
+    "auc": 0.9416844475175102,
+    "log_loss": 0.228511526224893
+  },
+  {
+    "segment": "Gender",
+    "value": "Male",
+    "rows": 367954,
+    "positives": 63381,
+    "positive_rate": 0.17225250982459764,
+    "auc": 0.9419598700955698,
+    "log_loss": 0.22486555351193804
+  },
+  {
+    "segment": "Gender",
+    "value": "Other",
+    "rows": 5284,
+    "positives": 918,
+    "positive_rate": 0.1737320211960636,
+    "auc": 0.9349264518756044,
+    "log_loss": 0.2387305183736588
+  },
+  {
+    "segment": "Home_Charging_Possible",
+    "value": "No",
+    "rows": 205988,
+    "positives": 26178,
+    "positive_rate": 0.12708507291686894,
+    "auc": 0.94715382215,
+    "log_loss": 0.18564581549205067
+  },
+  {
+    "segment": "Home_Charging_Possible",
+    "value": "Yes",
+    "rows": 462677,
+    "positives": 90601,
+    "positive_rate": 0.1958191135500576,
+    "auc": 0.9383070055296034,
+    "log_loss": 0.2448128961510579
+  },
+  {
+    "segment": "Range_Anxiety_Level",
+    "value": "High",
+    "rows": 2194,
+    "positives": 3,
+    "positive_rate": 0.0013673655423883319,
+    "auc": 0.9490339266697094,
+    "log_loss": 0.008969095709134548
+  },
+  {
+    "segment": "Range_Anxiety_Level",
+    "value": "Low",
+    "rows": 603972,
+    "positives": 114167,
+    "positive_rate": 0.18902697476041935,
+    "auc": 0.9390368559724178,
+    "log_loss": 0.23976373808212448
+  },
+  {
+    "segment": "Range_Anxiety_Level",
+    "value": "Medium",
+    "rows": 62499,
+    "positives": 2609,
+    "positive_rate": 0.04174466791468664,
+    "auc": 0.9320220391274383,
+    "log_loss": 0.10687921376560944
+  }
+]
