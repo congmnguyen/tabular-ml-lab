@@ -128,3 +128,5 @@ Code: [MIT](LICENSE). Competition data remains subject to [Kaggle competition ru
 [Round 7 report](reports/round7/report.md): ten outer folds improve pooled OOF and public AUC (**0.94632**); all predictions reproduced exactly from saved models. [Current selected run](reports/round7/runs/r7-tenfold.json).
 
 [Round 8 diagnostic](reports/round8/report.md): broad shared error regions replicate partly, but a fixed holdout correction adds only 0.000011 AUC; no new submission.
+
+[Round 9 report](reports/round9/report.md): joint income/commute effects improved ensemble OOF, but public AUC was **0.94631**. Best public result remains round seven (**0.94632**).

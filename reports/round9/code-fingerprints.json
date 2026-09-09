@@ -1,0 +1,9 @@
+{
+  "src/joint_effects.py": "918ef6dfcfa7fdb63d6a10ea19d5fda621f84885fee012df80977a3adc51fa2a",
+  "src/expert.py": "f226297a748f1ed7e5451c85af8f9621e9480b403e6803f5aaf7ebb206ae80ab",
+  "src/low_smoothing.py": "7cfe16cbb700d08242651a0f7ba97ac6f6b2eaa8e219123d177e303831e1bb1b",
+  "src/modulo_features.py": "3df980ee0918d77bcaf6b9267c8d46ccf84c79219a53a70687259b90f5e8ece4",
+  "src/offset_boost.py": "93af1b4e5986cc945f40250fd4cf8f46b80268bb665914cfa160453f413b293f",
+  "src/blend_experts.py": "1e68f5301d4d2d9d31d58a9492aeaf15ba3b41fec261c8a2f12cd2ac51a792f2",
+  "src/predict_expert.py": "7bc0f03b3845c7b1bed95f5afee03058b064dce52c8344bf8d8881fca6e64c6f"
+}

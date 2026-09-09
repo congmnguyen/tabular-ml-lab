@@ -40,7 +40,7 @@ def main():
                 for f in np.unique(fold):ranked[fold==f]=rankdata(o.prediction[fold==f])/sum(fold==f)
                 pred+=w*ranked;test_pred+=w*rankdata(t.Will_Buy_EV)/len(t)
             else:pred+=w*o.prediction.to_numpy();test_pred+=w*t.Will_Buy_EV.to_numpy()
-        aucs=[roc_auc_score(y[fold==f],pred[fold==f]) for f in range(5)]
+        aucs=[roc_auc_score(y[fold==f],pred[fold==f]) for f in np.unique(fold)]
         result={'kind':kind,'weights':weights.tolist(),'mean_auc':float(np.mean(aucs)),'fold_auc':aucs,'oof_auc':float(roc_auc_score(y,pred))}
         results.append(result)
         if best is None or result['mean_auc']>best[0]['mean_auc']:best=(result,pred,test_pred)
