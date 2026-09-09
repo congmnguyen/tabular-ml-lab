@@ -1,6 +1,6 @@
-# ML Template
+# Tabular ML Lab
 
-A reproducible binary tabular classification pipeline, demonstrated on **Kaggle Playground S6E9 — Predicting Electric Vehicle Purchases**.
+Reproducible tabular ML experiments with cross-validation, leakage checks, OOF ensembles, and Kaggle case studies. The first case study is **Kaggle Playground S6E9 — Predicting Electric Vehicle Purchases**.
 
 The case study compares linear, boosting and neural models on identical folds, investigates the synthetic data source, and records OOF metrics, error analysis and Kaggle submissions. The focus is traceable experiments and reliable preprocessing.
 
