@@ -1,0 +1,10 @@
+{
+  "Annual_Income_USD": {
+    "original_value_match_rate": 0.9794486028130678,
+    "share_at_least_double_original_frequency": 0.4070857604331018
+  },
+  "Daily_Commute_km": {
+    "original_value_match_rate": 0.9999955134484383,
+    "share_at_least_double_original_frequency": 0.21577321977372824
+  }
+}

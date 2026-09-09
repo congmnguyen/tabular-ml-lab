@@ -1,0 +1,214 @@
+{
+  "original": {
+    "rows": 10000,
+    "missing": {
+      "Buyer_ID": 0,
+      "Age": 0,
+      "Gender": 0,
+      "Annual_Income_USD": 178,
+      "City_Type": 0,
+      "Daily_Commute_km": 181,
+      "Number_of_Cars_Owned": 0,
+      "Current_Car_Type": 0,
+      "Charging_Stations_Near_Home": 0,
+      "Charging_Stations_Near_Work": 0,
+      "Home_Charging_Possible": 0,
+      "Environmental_Concern_Level": 184,
+      "Subsidy_Available": 0,
+      "Range_Anxiety_Level": 0,
+      "Will_Buy_EV": 0
+    },
+    "recipe_auc": 0.9084771371841005,
+    "recipe_logloss": 0.2744366988917749,
+    "income_30k_count": 557,
+    "income_unique": 8915,
+    "positive_rate": 0.175
+  },
+  "competition": {
+    "rows": 668665,
+    "missing": {
+      "id": 0,
+      "Age": 0,
+      "Annual_Income_USD": 0,
+      "Daily_Commute_km": 0,
+      "Number_of_Cars_Owned": 0,
+      "Charging_Stations_Near_Home": 0,
+      "Charging_Stations_Near_Work": 0,
+      "Environmental_Concern_Level": 0,
+      "Gender": 0,
+      "City_Type": 0,
+      "Current_Car_Type": 0,
+      "Home_Charging_Possible": 0,
+      "Subsidy_Available": 0,
+      "Range_Anxiety_Level": 0,
+      "Will_Buy_EV": 0
+    },
+    "recipe_auc": 0.9376904526009108,
+    "recipe_logloss": 0.2420245642426955,
+    "income_30k_count": 61605,
+    "income_unique": 13214,
+    "positive_rate": 0.17464500160768098
+  },
+  "charging_strata": [
+    {
+      "dataset": "original",
+      "stations": "0\u20132",
+      "home": "All",
+      "rows": 3200,
+      "rate": 0.1878125
+    },
+    {
+      "dataset": "original",
+      "stations": "0\u20132",
+      "home": "Yes",
+      "rows": 2588,
+      "rate": 0.21097372488408037
+    },
+    {
+      "dataset": "original",
+      "stations": "0\u20132",
+      "home": "No",
+      "rows": 612,
+      "rate": 0.08986928104575163
+    },
+    {
+      "dataset": "original",
+      "stations": "11\u201314",
+      "home": "All",
+      "rows": 1535,
+      "rate": 0.1752442996742671
+    },
+    {
+      "dataset": "original",
+      "stations": "11\u201314",
+      "home": "Yes",
+      "rows": 631,
+      "rate": 0.2091917591125198
+    },
+    {
+      "dataset": "original",
+      "stations": "11\u201314",
+      "home": "No",
+      "rows": 904,
+      "rate": 0.1515486725663717
+    },
+    {
+      "dataset": "competition",
+      "stations": "0\u20132",
+      "home": "All",
+      "rows": 239589,
+      "rate": 0.19001707090058392
+    },
+    {
+      "dataset": "competition",
+      "stations": "0\u20132",
+      "home": "Yes",
+      "rows": 214310,
+      "rate": 0.20157715458914657
+    },
+    {
+      "dataset": "competition",
+      "stations": "0\u20132",
+      "home": "No",
+      "rows": 25279,
+      "rate": 0.09201313343091103
+    },
+    {
+      "dataset": "competition",
+      "stations": "11\u201314",
+      "home": "All",
+      "rows": 87140,
+      "rate": 0.17269910488868487
+    },
+    {
+      "dataset": "competition",
+      "stations": "11\u201314",
+      "home": "Yes",
+      "rows": 35193,
+      "rate": 0.2106668939845992
+    },
+    {
+      "dataset": "competition",
+      "stations": "11\u201314",
+      "home": "No",
+      "rows": 51947,
+      "rate": 0.14697672627870714
+    }
+  ],
+  "income_last_digit_residuals": [
+    {
+      "digit": 0,
+      "rows": 133245,
+      "rate": 0.12200082554692483,
+      "mean_residual": 0.0006051386640385338
+    },
+    {
+      "digit": 1,
+      "rows": 65585,
+      "rate": 0.17295113211862467,
+      "mean_residual": -0.00446174544945684
+    },
+    {
+      "digit": 2,
+      "rows": 52881,
+      "rate": 0.1808967303946597,
+      "mean_residual": -0.003260781745994349
+    },
+    {
+      "digit": 3,
+      "rows": 59174,
+      "rate": 0.18955960388008247,
+      "mean_residual": 0.0011216957391537237
+    },
+    {
+      "digit": 4,
+      "rows": 57336,
+      "rate": 0.19786870378121948,
+      "mean_residual": 0.003331332268020814
+    },
+    {
+      "digit": 5,
+      "rows": 63432,
+      "rate": 0.1979127254382646,
+      "mean_residual": 0.004696585347520446
+    },
+    {
+      "digit": 6,
+      "rows": 57406,
+      "rate": 0.18909173257150821,
+      "mean_residual": 0.00036114962394577185
+    },
+    {
+      "digit": 7,
+      "rows": 59725,
+      "rate": 0.1959480954374215,
+      "mean_residual": 0.0013085052023657227
+    },
+    {
+      "digit": 8,
+      "rows": 59702,
+      "rate": 0.18133395866135138,
+      "mean_residual": -0.0022130258040399483
+    },
+    {
+      "digit": 9,
+      "rows": 60179,
+      "rate": 0.18468236427989831,
+      "mean_residual": -0.0021934569810775862
+    }
+  ],
+  "exact_original_feature_matches": {
+    "train": 0,
+    "test": 0
+  },
+  "income_cliff": {
+    "income>=170537": {
+      "rows": 393,
+      "rate": 1.0
+    },
+    "income38000to42000": {
+      "rows": 1277,
+      "rate": 0.0015661707126076742
+    }
+  }
+}
