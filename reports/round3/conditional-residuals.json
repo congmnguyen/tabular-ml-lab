@@ -1,0 +1,100 @@
+[
+  {
+    "income_bin":"(0, 40000]",
+    "Subsidy_Available":"No",
+    "rows":23379,
+    "positive_rate":0.0012404294,
+    "residual":-0.0000512524
+  },
+  {
+    "income_bin":"(0, 40000]",
+    "Subsidy_Available":"Yes",
+    "rows":38799,
+    "positive_rate":0.0695636485,
+    "residual":-0.0006891399
+  },
+  {
+    "income_bin":"(100000, 120000]",
+    "Subsidy_Available":"No",
+    "rows":34147,
+    "positive_rate":0.0091076815,
+    "residual":0.000097072
+  },
+  {
+    "income_bin":"(100000, 120000]",
+    "Subsidy_Available":"Yes",
+    "rows":67043,
+    "positive_rate":0.3901675044,
+    "residual":-0.0030675696
+  },
+  {
+    "income_bin":"(120000, 160000]",
+    "Subsidy_Available":"No",
+    "rows":25364,
+    "positive_rate":0.0132471219,
+    "residual":-0.0008173747
+  },
+  {
+    "income_bin":"(120000, 160000]",
+    "Subsidy_Available":"Yes",
+    "rows":53688,
+    "positive_rate":0.47319699,
+    "residual":-0.0030234718
+  },
+  {
+    "income_bin":"(160000, 300000]",
+    "Subsidy_Available":"No",
+    "rows":625,
+    "positive_rate":0.0112,
+    "residual":-0.0071735491
+  },
+  {
+    "income_bin":"(160000, 300000]",
+    "Subsidy_Available":"Yes",
+    "rows":1864,
+    "positive_rate":0.5944206009,
+    "residual":-0.0116003917
+  },
+  {
+    "income_bin":"(40000, 60000]",
+    "Subsidy_Available":"No",
+    "rows":22555,
+    "positive_rate":0.0022168034,
+    "residual":-0.0001419073
+  },
+  {
+    "income_bin":"(40000, 60000]",
+    "Subsidy_Available":"Yes",
+    "rows":32468,
+    "positive_rate":0.1466982875,
+    "residual":0.0021714442
+  },
+  {
+    "income_bin":"(60000, 80000]",
+    "Subsidy_Available":"No",
+    "rows":63289,
+    "positive_rate":0.0039501335,
+    "residual":0.0002168899
+  },
+  {
+    "income_bin":"(60000, 80000]",
+    "Subsidy_Available":"Yes",
+    "rows":94721,
+    "positive_rate":0.1919109807,
+    "residual":-0.0006878008
+  },
+  {
+    "income_bin":"(80000, 100000]",
+    "Subsidy_Available":"No",
+    "rows":79397,
+    "positive_rate":0.0056551255,
+    "residual":-0.0001215147
+  },
+  {
+    "income_bin":"(80000, 100000]",
+    "Subsidy_Available":"Yes",
+    "rows":131326,
+    "positive_rate":0.2820157471,
+    "residual":-0.0010966537
+  }
+]
