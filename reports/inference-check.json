@@ -1,0 +1,8 @@
+{
+  "run": "lightgbm-features",
+  "rows": 286571,
+  "id_order_matches": true,
+  "max_absolute_probability_difference": 4.440892098500626e-16,
+  "rtol": 1e-12,
+  "atol": 1e-12
+}

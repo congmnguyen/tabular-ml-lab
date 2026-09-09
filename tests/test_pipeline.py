@@ -32,3 +32,27 @@ def test_submission_rejects_bad_order_and_probabilities():
 def test_features_exclude_identifiers_and_target():
     x = features(pd.DataFrame({'id':[1],'y':['Yes'],'amount':[3.]}),CONFIG)
     assert list(x) == ['amount']
+
+def test_end_to_end_fixed_folds(tmp_path):
+    import argparse
+    import json
+    from src.pipeline import run
+    data = tmp_path/'data'
+    data.mkdir()
+    train = pd.DataFrame({'id':range(40), 'amount':np.arange(40, dtype=float),
+                          'category':['a','b']*20, 'y':['No','Yes']*20})
+    test = pd.DataFrame({'id':[100,101], 'amount':[2.,np.nan], 'category':['new','a']})
+    train.to_csv(data/'train.csv',index=False)
+    test.to_csv(data/'test.csv',index=False)
+    config = tmp_path/'config.json'
+    config.write_text(json.dumps(CONFIG))
+    for name in ['first','second']:
+        run(argparse.Namespace(config=str(config),data=str(data),output=str(tmp_path/name),
+                               model='logistic',engineered=False,variant=False))
+    first = pd.read_csv(tmp_path/'first/oof.csv')
+    second = pd.read_csv(tmp_path/'second/oof.csv')
+    pd.testing.assert_frame_equal(first,second)
+    assert first.id.is_unique and len(first)==40
+    assert first.groupby('fold').size().tolist()==[20,20]
+    sub = pd.read_csv(tmp_path/'first/submission.csv')
+    validate_submission(sub,test,CONFIG)
