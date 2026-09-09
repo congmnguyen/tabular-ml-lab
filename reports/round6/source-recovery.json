@@ -1,0 +1,87 @@
+{
+  "reference": "https://www.kaggle.com/code/yhay81/exact-reconstruction-of-the-ev-source-dataset",
+  "observed_matches": {
+    "Age": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Gender": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Annual_Income_USD": {
+      "observed_cells": 9822,
+      "mismatches": 0
+    },
+    "City_Type": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Number_of_Cars_Owned": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Current_Car_Type": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Daily_Commute_km": {
+      "observed_cells": 9819,
+      "mismatches": 0
+    },
+    "Charging_Stations_Near_Home": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Charging_Stations_Near_Work": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Home_Charging_Possible": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    },
+    "Environmental_Concern_Level": {
+      "observed_cells": 9816,
+      "mismatches": 0
+    },
+    "Subsidy_Available": {
+      "observed_cells": 10000,
+      "mismatches": 0
+    }
+  },
+  "filled": {
+    "Annual_Income_USD": 178,
+    "Daily_Commute_km": 181,
+    "Environmental_Concern_Level": 184
+  },
+  "coverage": {
+    "train": {
+      "Annual_Income_USD": {
+        "before": 654923,
+        "after": 654940,
+        "newly_covered": 17
+      },
+      "Daily_Commute_km": {
+        "before": 668662,
+        "after": 668662,
+        "newly_covered": 0
+      }
+    },
+    "test": {
+      "Annual_Income_USD": {
+        "before": 280606,
+        "after": 280612,
+        "newly_covered": 6
+      },
+      "Daily_Commute_km": {
+        "before": 286570,
+        "after": 286570,
+        "newly_covered": 0
+      }
+    }
+  },
+  "original_sha256": "c271a380df51b18177d0a039d54525ca7c3d71500701dc7496714a091df16fae",
+  "repaired_sha256": "1abe89b0725b29e6b49688e6c060808b26a5a67a766c2950ecacfa9732fdb27a",
+  "labels_unchanged": true
+}

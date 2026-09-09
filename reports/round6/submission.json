@@ -1,0 +1,9 @@
+{
+  "ref": "56121758",
+  "fileName": "submission.csv",
+  "date": "2026-09-09 11:48:55.503000",
+  "description": "Round 6: lower smoothing modulo offset XGB 45 LGB 45 TabM 10; mean CV 0.94616635",
+  "status": "SubmissionStatus.COMPLETE",
+  "publicScore": "0.94627",
+  "privateScore": ""
+}

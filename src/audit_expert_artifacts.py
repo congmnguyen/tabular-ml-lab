@@ -26,6 +26,7 @@ def main():
             result['actual_estimator_params']=b['model'].get_params()
             result['encoder_class']=f"{type(b['encoder']).__module__}.{type(b['encoder']).__name__}"
             result['encoder_source_sha256']=digest(inspect.getfile(type(b['encoder'])))
+            result['actual_target_encoder_params']=[e.get_params() for e in getattr(b['encoder'],'encoders',[])]
             result['artifact_sha256']=digest(path)
             folds.append(result)
         info={'run':str(run),'complete':(run/'summary.json').exists(),'folds':folds}

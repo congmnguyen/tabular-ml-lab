@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "fit_fold": 3,
+      "evaluation_fold": 4,
+      "penalty": 10.0,
+      "baseline_auc": 0.9457911957657557,
+      "corrected_auc": 0.9457763117402376,
+      "auc_gain": -1.4884025518080435e-05,
+      "baseline_logloss": 0.2189354250113236,
+      "corrected_logloss": 0.21895713528412392,
+      "max_abs_logodds_correction": 0.236828838283979
+    },
+    {
+      "fit_fold": 3,
+      "evaluation_fold": 4,
+      "penalty": 100.0,
+      "baseline_auc": 0.9457911957657557,
+      "corrected_auc": 0.9457929345401888,
+      "auc_gain": 1.7387744331021082e-06,
+      "baseline_logloss": 0.2189354250113236,
+      "corrected_logloss": 0.2189302095800456,
+      "max_abs_logodds_correction": 0.0902513032761221
+    },
+    {
+      "fit_fold": 3,
+      "evaluation_fold": 4,
+      "penalty": 1000.0,
+      "baseline_auc": 0.9457911957657557,
+      "corrected_auc": 0.9457956684793308,
+      "auc_gain": 4.4727135751765346e-06,
+      "baseline_logloss": 0.2189354250113236,
+      "corrected_logloss": 0.21892215589237615,
+      "max_abs_logodds_correction": 0.035240156322889835
+    },
+    {
+      "fit_fold": 4,
+      "evaluation_fold": 3,
+      "penalty": 10.0,
+      "baseline_auc": 0.945980938822692,
+      "corrected_auc": 0.945966325553349,
+      "auc_gain": -1.46132693429335e-05,
+      "baseline_logloss": 0.2185155215767959,
+      "corrected_logloss": 0.21854738621397943,
+      "max_abs_logodds_correction": 0.408067297058365
+    },
+    {
+      "fit_fold": 4,
+      "evaluation_fold": 3,
+      "penalty": 100.0,
+      "baseline_auc": 0.945980938822692,
+      "corrected_auc": 0.9459872342916626,
+      "auc_gain": 6.295468970685114e-06,
+      "baseline_logloss": 0.2185155215767959,
+      "corrected_logloss": 0.21850461113759553,
+      "max_abs_logodds_correction": 0.1354879905780988
+    },
+    {
+      "fit_fold": 4,
+      "evaluation_fold": 3,
+      "penalty": 1000.0,
+      "baseline_auc": 0.945980938822692,
+      "corrected_auc": 0.9459851640542618,
+      "auc_gain": 4.225231569843224e-06,
+      "baseline_logloss": 0.2185155215767959,
+      "corrected_logloss": 0.21849963612550355,
+      "max_abs_logodds_correction": 0.03609553110317929
+    }
+  ],
+  "basis": "8-knot cubic income splines with subsidy and concern interactions",
+  "warning": "Frozen base model fits neither diagnostic holdout. These repeatedly explored holdouts are development data, not a pristine final test."
+}

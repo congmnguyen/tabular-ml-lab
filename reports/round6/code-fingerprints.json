@@ -1,0 +1,11 @@
+{
+  "src/expert.py": "fe46080554821b5fda90307dd1c33dfe48d8f8e9bf3f3d35f4f5cb8af5e287d6",
+  "src/offset_boost.py": "93af1b4e5986cc945f40250fd4cf8f46b80268bb665914cfa160453f413b293f",
+  "src/modulo_features.py": "3df980ee0918d77bcaf6b9267c8d46ccf84c79219a53a70687259b90f5e8ece4",
+  "src/low_smoothing.py": "7cfe16cbb700d08242651a0f7ba97ac6f6b2eaa8e219123d177e303831e1bb1b",
+  "src/dense_crossfit.py": "2fcb1b0f81ea6706ce18c3b29b0ce8371dc25e9365c96f13a9fe3f5d46cc601e",
+  "src/recover_source_features.py": "3ac7c8eef1f978b7209438aca20d01e9a1e48c6bbbbbcc131b7dbe0fdc143e01",
+  "src/smooth_audit.py": "1c79a7fbf7e780cc28d5d9ca81f297f707e0e6db525fa9ce157f951bac1f7c3d",
+  "src/blend_experts.py": "c99a85f96ca26f8cc3d13742a68b13ca1bbdb0022bce3e34e14828c446e28f7b",
+  "src/predict_expert.py": "d56019436ab7047e899ea43b6f3550310f6dfc45a4b8f0dc0a2d8e57f7c03701"
+}

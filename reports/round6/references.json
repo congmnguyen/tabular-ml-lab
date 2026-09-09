@@ -1,0 +1,26 @@
+[
+  {
+    "notebook": "exact-reconstruction-of-the-ev-source-dataset.ipynb",
+    "retrieved": "2026-09-09",
+    "sha256": "1afbbab69e00d042f172006a078c8a6c1c5f79da76a54a4af0f733ed3286f4fb",
+    "use": "Read for research only"
+  },
+  {
+    "notebook": "the-1000-leak-a-from-scratch-0-946-pipeline.ipynb",
+    "retrieved": "2026-09-09",
+    "sha256": "4bc008b873163ee43a7a75782d057b5098d08e33571cfbd060798e24c9456033",
+    "use": "Read for research only"
+  },
+  {
+    "notebook": "s6e9-lb-0-94643-and-six-missing-sources.ipynb",
+    "retrieved": "2026-09-09",
+    "sha256": "594d155a4ee33636d358677852474dd3dd12d628ce18bdd34beb4083591d31ec",
+    "use": "Read for research only"
+  },
+  {
+    "notebook": "s6e9-0-938-phenomenon-0-946-generator.ipynb",
+    "retrieved": "2026-09-09",
+    "sha256": "5481518b6b4bab417fbe4fd192b3a120450736879cd337bf2fa6ae96e83e45d2",
+    "use": "Read for research only"
+  }
+]

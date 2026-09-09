@@ -1,0 +1,11 @@
+{
+  "modulus_oof_auc": {
+    "10": 0.5458543296742356,
+    "100": 0.5725318834528583,
+    "1000": 0.6180576492215524
+  },
+  "smoothing": 100,
+  "folds": 5,
+  "seed": 42,
+  "interpretation": "Univariate predictive associations, not evidence of causal income effects or incremental gains over the incumbent."
+}
