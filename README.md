@@ -6,9 +6,11 @@ The case study compares linear, boosting and neural models on identical folds, i
 
 ## Results
 
-**Best submitted public AUC: 0.94618**, from a 50:50 rank blend of expert-informed LightGBM and XGBoost (development mean five-fold AUC 0.946021). The requested leaderboard target of 0.94672 has not been exceeded.
+**Best submitted public AUC: 0.94624**, from a rank blend of LightGBM (45%), XGBoost trained with a fold-fitted probit offset (45%) and TabM (10%). Development mean five-fold AUC is 0.946126. The requested leaderboard target of 0.94672 has not been exceeded.
 
-[Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json). The [round 3 report](reports/round3/report.md) adds nine run configurations and a five-fold TabM ensemble: development mean AUC increased to 0.946066, while its public submission tied 0.94618. The simpler two-tree blend remains the incumbent.
+[Round 4 report](reports/round4/report.md) documents the mechanism audit, conditional permutation diagnostics, failed risk-adjusted encoding, five-fold improvements and the new public best. [Current selected blend](reports/round4/selected.json).
+
+[Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json). The [round 3 report](reports/round3/report.md) adds nine run configurations and a five-fold TabM ensemble: development mean AUC increased to 0.946066, while its public submission tied 0.94618. These earlier blends are retained as historical baselines.
 
 The initial pipeline below remains a simpler, inductive baseline: LightGBM with charging/commute features scored 0.94160 publicly; Logistic Regression scored 0.93738. Its original five configurations and 25 fold fits are preserved.
 

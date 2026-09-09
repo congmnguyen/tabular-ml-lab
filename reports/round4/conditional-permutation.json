@@ -1,0 +1,51 @@
+{
+  "fold": 0,
+  "model": "r2-full-xgb",
+  "baseline_auc": 0.9450219540823223,
+  "strata": "income floor/1000 \u00d7 concern \u00d7 subsidy \u00d7 anxiety",
+  "warning": "Conditional permutation is an approximate diagnostic, not a causal effect or an independent model-selection holdout.",
+  "results": [
+    {
+      "block": "income_identity_within_1k_and_core",
+      "seed": 42,
+      "auc": 0.9366060492563458,
+      "auc_drop": 0.008415904825976428,
+      "rows_moved": 130944
+    },
+    {
+      "block": "income_identity_within_1k_and_core",
+      "seed": 43,
+      "auc": 0.9362559227439681,
+      "auc_drop": 0.008766031338354185,
+      "rows_moved": 130974
+    },
+    {
+      "block": "commute_within_1k_and_core",
+      "seed": 42,
+      "auc": 0.9433438850731732,
+      "auc_drop": 0.0016780690091490191,
+      "rows_moved": 130944
+    },
+    {
+      "block": "commute_within_1k_and_core",
+      "seed": 43,
+      "auc": 0.9432864841841112,
+      "auc_drop": 0.0017354698982110506,
+      "rows_moved": 130974
+    },
+    {
+      "block": "other_covariates_within_1k_and_core",
+      "seed": 42,
+      "auc": 0.9435734399459736,
+      "auc_drop": 0.001448514136348611,
+      "rows_moved": 130944
+    },
+    {
+      "block": "other_covariates_within_1k_and_core",
+      "seed": 43,
+      "auc": 0.943678208278724,
+      "auc_drop": 0.0013437458035983063,
+      "rows_moved": 130974
+    }
+  ]
+}
