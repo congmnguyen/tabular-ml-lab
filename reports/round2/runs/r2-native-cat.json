@@ -1,0 +1,48 @@
+{
+  "run": "artifacts/r2-native-cat",
+  "complete": false,
+  "folds": [
+    {
+      "fold": 0,
+      "auc": 0.9445142421566476,
+      "log_loss": 0.22128635192297252,
+      "average_precision": 0.7740343099367732,
+      "best_iteration": 1887,
+      "seconds": 86.85100713600059,
+      "params": {
+        "iterations": 3000,
+        "depth": 6,
+        "learning_rate": 0.04,
+        "l2_leaf_reg": 5,
+        "loss_function": "Logloss",
+        "eval_metric": "AUC",
+        "task_type": "GPU",
+        "devices": "0",
+        "random_seed": 42,
+        "thread_count": 8,
+        "allow_writing_files": false,
+        "early_stopping_rounds": 250,
+        "verbose": 500
+      },
+      "source_sha256": "ea014dd57d1ce89bc716c805ad520ce075f47b73b9036760722eb468ae56947b",
+      "actual_estimator_params": {
+        "iterations": 3000,
+        "learning_rate": 0.04,
+        "depth": 6,
+        "l2_leaf_reg": 5,
+        "loss_function": "Logloss",
+        "thread_count": 8,
+        "random_seed": 42,
+        "verbose": 500,
+        "eval_metric": "AUC",
+        "allow_writing_files": false,
+        "task_type": "GPU",
+        "devices": "0",
+        "early_stopping_rounds": 250
+      },
+      "encoder_class": "src.native_cat.NativeEncoder",
+      "encoder_source_sha256": "ea014dd57d1ce89bc716c805ad520ce075f47b73b9036760722eb468ae56947b",
+      "artifact_sha256": "a6be36512a29a33b4f6474ce6721f73e6d5b29b3f5d7606039027ceb2e019a06"
+    }
+  ]
+}

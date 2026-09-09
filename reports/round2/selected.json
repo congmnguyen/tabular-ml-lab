@@ -1,0 +1,23 @@
+{
+  "run": "artifacts/r2-blend",
+  "selection": {
+    "kind": "rank",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "mean_auc": 0.946020747408902,
+    "fold_auc": [
+      0.9450914934425199,
+      0.9457180149877058,
+      0.9468242453924937,
+      0.9463427945590137,
+      0.946127188662777
+    ],
+    "oof_auc": 0.9460207819409217
+  },
+  "public_score": 0.94618,
+  "submission_id": 56119769,
+  "target_score": 0.94672,
+  "target_exceeded": false
+}

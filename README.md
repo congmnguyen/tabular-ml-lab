@@ -6,7 +6,11 @@ The case study compares Logistic Regression, LightGBM and CatBoost on identical 
 
 ## Results
 
-**Selected model: LightGBM with charging/commute features — mean 5-fold AUC 0.941800, public Kaggle AUC 0.94160.** Logistic baseline public AUC: 0.93738. Five configurations and 25 fold fits completed.
+**Best submitted public AUC: 0.94618**, from a 50:50 rank blend of expert-informed LightGBM and XGBoost (development mean five-fold AUC 0.946021). The requested leaderboard target of 0.94672 has not been exceeded.
+
+[Round 2 report](reports/round2/report.md) documents expert sources, independent data investigation, cross-fitted target encoding, screening failures, and the submitted blend. [Selected blend](reports/round2/selected.json).
+
+The initial pipeline below remains a simpler, inductive baseline: LightGBM with charging/commute features scored 0.94160 publicly; Logistic Regression scored 0.93738. Its original five configurations and 25 fold fits are preserved.
 
 See the [experiment report](reports/ev-purchases.md), [predefined experiment plan](reports/experiment-plan.md), and [submission record](reports/submissions.md). Metrics come from executed runs; the competition's final private leaderboard is not yet available.
 
@@ -33,7 +37,7 @@ make report DATA=data/ev-purchases
 
 Each experiment refuses to overwrite a completed run. For a new experiment, use a new `--output` directory via the CLI. `make experiments` runs the four non-logistic candidates sequentially.
 
-## Pipeline
+## Initial baseline pipeline
 
 ```text
 train/test CSV + config
@@ -51,7 +55,7 @@ train/test CSV + config
 - Fixed iteration budgets, without early stopping on the scored validation fold.
 - Reloaded artifact predictions are checked against in-memory predictions for each fold.
 
-## Saved artifacts
+## Initial baseline artifacts
 
 Each ignored `artifacts/<run>/` contains:
 
@@ -81,6 +85,25 @@ kaggle competitions submit playground-series-s6e9 \
   -m "Five-fold LightGBM with charging/commute features; selected by CV"
 kaggle competitions submissions playground-series-s6e9
 ```
+
+## Expert-informed competition experiments
+
+These EV-specific experiments extend the generic baseline. They use public original-data statistics and internally cross-fitted target encoders, with early stopping on each scored outer fold. Scores are development estimates with selection optimism. The selected blend's frequency maps use outer training features only; the separately screened transductive variant was not selected.
+
+```bash
+kaggle datasets download -d itzzomkar/ev-adoption-behavior-and-range-anxiety \
+  -p ~/.cache/kaggle/ev-original --unzip
+.venv/bin/python -m src.expert --output artifacts/new-full-lgb --model lgb --mode full --rounds 6000
+.venv/bin/python -m src.expert --output artifacts/new-full-xgb --model xgb --mode full --rounds 5000
+.venv/bin/python -m src.blend_experts \
+  --runs artifacts/new-full-lgb artifacts/new-full-xgb --output artifacts/new-blend
+.venv/bin/python -m src.predict_expert --run artifacts/new-blend \
+  --test data/ev-purchases/test.csv --output artifacts/new-reproduced.csv
+```
+
+The expert runner defaults to competition CSVs under `~/.cache/kaggle/playground-series-s6e9`; pass `--data data/ev-purchases` for another directory and `--original path/to/original.csv` when needed. XGBoost is configured for an NVIDIA CUDA GPU; LightGBM uses CPU. The other screening modules and their applied settings are documented in the round-two report and run records. `--folds 0` performs a screen; omitted `--folds` trains all five. Completed folds are reused, so use a new output directory for changed settings.
+
+Rank-blend outputs are scores for ROC-AUC, not calibrated purchase probabilities. Expert artifacts use `foldN.joblib`, `foldN.npz`, and `summary.json`; the baseline runner retains its separate artifact format.
 
 ## Reuse and scope
 

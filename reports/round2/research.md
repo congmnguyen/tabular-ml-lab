@@ -31,3 +31,19 @@ Reproduce with `python -m src.investigate`. Full aggregates: [data-investigation
 4. If complementary models emerge, compare a small set of fixed blends on OOF, including per-fold deltas; submit only validated improvements. Maximum ten submissions/day; eight remained at the beginning of this round.
 
 Target encoders fit_transform only on each outer training fold (internal five-fold cross-fitting); transform on outer validation/test. Original target statistics use only the public original dataset. Frequency maps and categorical dictionaries learn from outer training features, not validation labels. No leaderboard probing to recover labels, no private-data access, no public prediction-file averaging.
+
+## Additional hypothesis after expert-feature screening
+
+The full expert-inspired feature set improved fold-0 AUC to 0.945073 (LightGBM) / 0.945022 (XGBoost), versus 0.940630 for the previous selected model on this fold. Both proceed to five-fold evaluation.
+
+Next screen: add auto-smoothed target encodings, original-to-competition frequency ratios and an inner-cross-fitted encoding of `target - original_recipe_probability` for income/commute keys. Rationale: isolate synthetic-generator deviations after accounting for the source recipe. Ratios learn competition frequencies from the outer train fold only. This grouped experiment cannot attribute its gain to one component; if useful, retain that limitation in the report.
+
+A second focused screen uses 1,024 histogram bins (instead of 255), 0.3 feature fraction and minimum leaf size 10, following the published Pure LGBM settings. Hypothesis: preserve narrow repeated-income pockets while reducing correlated-feature competition at each tree. The exact applied settings are available from saved model get_params; the shared runner's initial params field is overridden by src/fine_bins.py for this candidate.
+
+The residual/replication grouped screen scored 0.945032 on fold 0, below the 0.945073 full-feature LightGBM screen, so it was not expanded. A shallower XGBoost screen (depth 4, learning rate 0.025) tests smoother corrections and potential complementary errors. Actual estimator parameters, encoder classes and artifact hashes are exported with `python -m src.audit_expert_artifacts` to avoid relying on the shared runner's pre-override parameter dictionary.
+
+Because explicit-TE LightGBM/XGBoost OOF probabilities correlate at 0.99932, their blend offers little diversity. A final screen tests GPU CatBoost with native categorical income/commute keys and original-data statistics, retaining digit/recipe features but replacing explicit cross-fitted target encoding with CatBoost's native categorical mechanism. Evaluate both its own fold-0 AUC and a fixed 25% CatBoost / 75% existing blend before expanding. GPU CatBoost is not bitwise deterministic.
+
+After the 0.94618 public result, one representation ablation removes high-cardinality recipe/worry/interaction keys and the car-count family, while adding auto-smoothed target encoding to the raw/digit/bin keys and using the finer histogram setting. Motivation: target-encoding nearly unique derived scores may add noise and obscure repeated raw-value effects. This is a grouped, expert-informed ablation rather than a claim that each removed feature is useless. It is screened on fold 0 before any further submissions.
+
+One important methodological difference from Naji's notebook is frequency estimation: its maps use combined train+test features, while ours originally used outer-training features only. A labelled-as-transductive ablation estimates frequencies from all available train/test feature rows (target excluded when reading CSV), while keeping every supervised target encoder cross-fitted within the outer training fold. This tests whether reduced frequency-estimation noise matters. Such a model assumes the competition test batch is available and is not an ordinary inductive deployment pipeline.
